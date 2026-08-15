@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Henderson Transpacific LLC — Materials Science Department · Automotive Acoustic Engineering</title>
+<meta name="description" content="Engineering-grade acoustic treatment for any vehicle. Designed in USA. Constrained-layer damping validated by RKU structural dynamics, delivered as a complete engineered service with measured acceptance.">
+<style>
+
+:root{
+  --navy:#101826; --navy-2:#1a2536; --navy-3:#243349;
+  --ivory:#faf8f4; --ivory-2:#f1eee7; --paper:#ffffff;
+  --ink:#141a24; --ink-2:#48505e; --ink-3:#7b8494;
+  --gold:#b98a3c; --gold-2:#d8b06a; --gold-bg:#f7efe0;
+  --rule:#e4e0d7; --rule-2:#cfc9bc;
+  --series-1:#2a78d6; --series-3:#1baf7a; --crit:#c0322f;
+  --mono:"SFMono-Regular",Consolas,Menlo,monospace;
+  --serif:Georgia,"Times New Roman","Songti TC",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+ font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.zh{display:block;color:var(--ink-3);font-size:.92em;margin-top:2px}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+/* ---- nav ---- */
+nav{position:sticky;top:0;z-index:50;background:rgba(16,24,38,.96);backdrop-filter:blur(8px);
+ border-bottom:1px solid rgba(216,176,106,.25)}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:26px;height:60px}
+.logo{color:var(--ivory);font-weight:700;letter-spacing:.06em;font-size:14px;white-space:nowrap}
+.logo b{color:var(--gold-2)}
+.logo small{display:block;font-weight:400;font-size:9.5px;letter-spacing:.22em;color:#8d97a8;text-transform:uppercase}
+.nav-links{margin-left:auto;display:flex;gap:22px;font-size:13px}
+.nav-links a{color:#c4cbd6}
+.nav-links a:hover{color:var(--gold-2);text-decoration:none}
+@media(max-width:760px){.nav-links{display:none}}
+/* ---- hero ---- */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 55%,var(--navy-3) 100%);color:var(--ivory);
+ padding:88px 28px 72px;position:relative;overflow:hidden}
+.hero::after{content:"η";position:absolute;right:-40px;top:-60px;font-family:var(--serif);
+ font-size:460px;line-height:1;color:rgba(216,176,106,.05);pointer-events:none}
+.hero-in{max-width:1080px;margin:0 auto;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+ color:var(--gold-2);border:1px solid rgba(216,176,106,.4);border-radius:20px;padding:6px 16px;margin-bottom:26px}
+.hero h1{font-family:var(--serif);font-size:44px;line-height:1.18;margin:0 0 18px;font-weight:600;max-width:760px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--gold-2)}
+.hero .lead{font-size:17px;color:#b9c2d0;max-width:680px;margin:0 0 10px}
+.hero .lead-zh{font-size:14.5px;color:#8d97a8;max-width:680px;margin:0 0 34px}
+.cta{display:inline-block;background:var(--gold);color:#fff;font-weight:650;padding:13px 30px;border-radius:6px;font-size:14.5px;letter-spacing:.02em}
+.cta:hover{background:#a67a30;text-decoration:none}
+.cta.ghost{background:transparent;border:1px solid rgba(216,176,106,.5);color:var(--gold-2);margin-left:12px}
+.herostats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(216,176,106,.25);
+ border:1px solid rgba(216,176,106,.25);border-radius:10px;overflow:hidden;margin-top:52px;max-width:900px}
+.hs{background:rgba(16,24,38,.75);padding:18px 20px}
+.hs .v{font-size:26px;font-weight:680;color:var(--gold-2);font-variant-numeric:tabular-nums;font-family:var(--serif)}
+.hs .l{font-size:11.5px;color:#8d97a8;margin-top:4px;line-height:1.5}
+@media(max-width:760px){.hero h1{font-size:31px}.herostats{grid-template-columns:repeat(2,1fr)}}
+/* ---- sections ---- */
+section{padding:72px 28px}
+.sec-in{max-width:1080px;margin:0 auto}
+.sec-tag{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:650;margin:0 0 10px}
+h2{font-family:var(--serif);font-size:31px;line-height:1.25;margin:0 0 14px;font-weight:600;letter-spacing:-.01em}
+h3{font-size:16.5px;margin:30px 0 10px;font-weight:650}
+p{margin:0 0 13px}
+.intro{font-size:16.5px;color:var(--ink-2);max-width:780px}
+section.alt{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+section.dark{background:var(--navy);color:var(--ivory)}
+section.dark h2{color:var(--ivory)}
+section.dark .intro{color:#b9c2d0}
+section.dark .zh{color:#8d97a8}
+/* ---- equations & tables ---- */
+.eq{background:var(--ivory-2);border-left:3px solid var(--gold);padding:14px 18px;margin:16px 0;
+ font-family:var(--mono);font-size:13px;overflow-x:auto;line-height:2.0;border-radius:0 6px 6px 0}
+section.dark .eq{background:rgba(255,255,255,.05);border-left-color:var(--gold-2);color:#dfe4ec}
+table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:13.5px;background:var(--paper)}
+th{text-align:left;font-weight:650;color:var(--ink-2);border-bottom:2px solid var(--gold);
+ padding:9px 12px;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase}
+td{padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+/* ---- cards ---- */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:24px 26px}
+section.dark .card{background:rgba(255,255,255,.05);border-color:rgba(216,176,106,.2)}
+.card h3{margin-top:0}
+.card .step{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.check{list-style:none;padding:0;margin:0 0 14px}
+.check li{padding-left:26px;position:relative;margin-bottom:8px;font-size:14px}
+.check li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+/* ---- pricing ---- */
+.pkg{border:1px solid var(--rule);border-radius:12px;background:var(--paper);overflow:hidden;display:flex;flex-direction:column}
+.pkg.feat{border-color:var(--gold);box-shadow:0 6px 28px rgba(185,138,60,.14)}
+.pkg-h{padding:22px 26px 16px;border-bottom:1px solid var(--rule)}
+.pkg-h .nm{font-family:var(--serif);font-size:20px;font-weight:650}
+.pkg-h .for{font-size:12.5px;color:var(--ink-3);margin-top:2px}
+.pkg-b{padding:20px 26px;flex:1}
+.pkg-p{padding:18px 26px;border-top:1px dashed var(--rule-2);background:var(--ivory)}
+.price{font-family:var(--serif);font-size:24px;font-weight:650;color:var(--navy)}
+.price .ph{color:var(--ink-3);background:var(--ivory-2);border:1px dashed var(--rule-2);border-radius:6px;padding:0 10px;font-size:18px}
+.price-note{font-size:11.5px;color:var(--ink-3);margin-top:4px}
+.badge{display:inline-block;background:var(--gold-bg);color:var(--gold);font-size:10.5px;font-weight:700;
+ letter-spacing:.1em;text-transform:uppercase;border-radius:14px;padding:3px 11px;margin-bottom:10px}
+/* ---- chart ---- */
+figure{margin:26px 0}
+figcaption{font-size:12.5px;color:var(--ink-3);margin-top:10px;line-height:1.6;max-width:820px}
+figcaption b{color:var(--ink-2)}
+.chart{width:100%;height:auto;display:block;overflow:visible;background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:18px 10px 6px}
+.grid{stroke:var(--rule);stroke-width:1}
+.axis{stroke:var(--rule-2);stroke-width:1}
+.tick{font-size:11px;fill:var(--ink-3);font-family:var(--mono)}
+.axlab{font-size:11.5px;fill:var(--ink-3)}
+.ta-mid{text-anchor:middle}.ta-end{text-anchor:end}
+.band{fill:var(--series-1);opacity:.06}
+.bandlab{font-size:10.5px;fill:var(--ink-3)}
+.s1{fill:none;stroke:var(--series-1);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+.s3{fill:none;stroke:var(--series-3);stroke-width:2;stroke-dasharray:6 4}
+.slab{font-size:11.5px;font-weight:640}
+.s1t{fill:var(--series-1)}.s3t{fill:var(--series-3)}
+.dot{fill:var(--series-1);stroke:var(--paper);stroke-width:2}
+/* ---- safety ---- */
+.redline{border:1px solid rgba(192,50,47,.35);border-left:4px solid var(--crit);background:#fdf2f1;
+ border-radius:0 10px 10px 0;padding:18px 22px;margin:20px 0}
+.redline .t{font-weight:700;color:var(--crit);font-size:14px;margin-bottom:6px}
+/* ---- contact ---- */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:30px}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8d97a8;margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(216,176,106,.3);
+ border-radius:6px;color:var(--ivory);padding:11px 13px;font-size:14px;font-family:inherit}
+.field textarea{min-height:96px;resize:vertical}
+.ph-note{font-size:12px;color:#8d97a8;border:1px dashed rgba(216,176,106,.35);border-radius:8px;padding:12px 16px;margin-top:16px}
+/* ---- footer ---- */
+footer{background:#0b1220;color:#7b8494;padding:40px 28px;font-size:12px;line-height:1.8}
+.foot-in{max-width:1080px;margin:0 auto}
+footer b{color:#c4cbd6}
+
+/* ---- language switching ---- */
+.L{display:none}
+body[data-lang="en"] .L.en,body[data-lang="zt"] .L.zt,body[data-lang="zs"] .L.zs,
+body[data-lang="it"] .L.it,body[data-lang="ja"] .L.ja{display:contents}
+svg text.L{display:none}
+body[data-lang="en"] svg text.L.en,body[data-lang="zt"] svg text.L.zt,body[data-lang="zs"] svg text.L.zs,
+body[data-lang="it"] svg text.L.it,body[data-lang="ja"] svg text.L.ja{display:inline}
+.langbar{display:flex;gap:2px;margin-left:18px}
+.langbar button{background:transparent;border:1px solid rgba(216,176,106,.35);color:#c4cbd6;
+ font-size:11px;font-weight:650;letter-spacing:.04em;padding:4px 9px;cursor:pointer;font-family:inherit}
+.langbar button:first-child{border-radius:5px 0 0 5px}
+.langbar button:last-child{border-radius:0 5px 5px 0}
+.langbar button.on{background:var(--gold);border-color:var(--gold);color:#fff}
+@media(max-width:760px){.langbar{margin-left:auto}}
+body[data-lang="ja"]{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif}
+body[data-lang="ja"] .hero h1{font-size:37px;line-height:1.32}
+@media(max-width:760px){body[data-lang="ja"] .hero h1{font-size:27px}}
+body[data-lang="zs"]{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif}
+</style>
+</head>
+<body data-lang="en">
+
+<nav>
+ <div class="nav-in">
+  <div class="logo">HENDERSON <b>TRANSPACIFIC</b> LLC<small>Materials Science Department</small></div>
+  <div class="nav-links">
+   <a href="#science"><span class="L en">The Science</span><span class="L zt">科學原理</span><span class="L zs">科学原理</span><span class="L it">La Scienza</span><span class="L ja">科学</span></a><a href="#chemistry"><span class="L en">Chemistry</span><span class="L zt">界面化學</span><span class="L zs">界面化学</span><span class="L it">Chimica</span><span class="L ja">化学</span></a><a href="#service"><span class="L en">Service</span><span class="L zt">服務</span><span class="L zs">服务</span><span class="L it">Servizio</span><span class="L ja">サービス</span></a>
+   <a href="#acceptance"><span class="L en">Acceptance</span><span class="L zt">驗收</span><span class="L zs">验收</span><span class="L it">Collaudo</span><span class="L ja">検収</span></a><a href="#safety"><span class="L en">Safety</span><span class="L zt">安全</span><span class="L zs">安全</span><span class="L it">Sicurezza</span><span class="L ja">安全</span></a><a href="#contact"><span class="L en">Enquire</span><span class="L zt">詢價</span><span class="L zs">询价</span><span class="L it">Contatti</span><span class="L ja">お問い合わせ</span></a>
+  </div>
+  <div class="langbar" id="langbar">
+   <button data-l="en" class="on">EN</button><button data-l="zt">繁</button><button data-l="zs">简</button><button data-l="it">IT</button><button data-l="ja">日</button>
+  </div>
+ </div>
+</nav>
+
+<div class="hero">
+ <div class="hero-in">
+  <div class="eyebrow"><span class="L en">Designed in USA · Delivered in the Greater Bay Area</span><span class="L zt">美國設計 · 大灣區交付</span><span class="L zs">美国设计 · 大湾区交付</span><span class="L it">Progettato negli USA · Realizzato nella Greater Bay Area</span><span class="L ja">米国設計 · グレーターベイエリア施工</span></div>
+  <h1><span class="L en">Acoustic engineering for your car,<br>not an accessory kit — <em>an engineered result.</em></span><span class="L zt">為你的車做聲學工程，不是賣配件<br><em>—— 交付的是工程結果。</em></span><span class="L zs">为你的车做声学工程，不是卖配件<br><em>—— 交付的是工程结果。</em></span><span class="L it">Ingegneria acustica per la tua auto,<br>non un kit di accessori — <em>un risultato ingegnerizzato.</em></span><span class="L ja">クルマのための音響エンジニアリング。<br><em>アクセサリーではなく、工学的な結果を。</em></span></h1>
+  <p class="lead"><span class="L en">We treat cabin noise as a structural-dynamics problem — and every car is a different structure. Steel or aluminium, sedan or SUV, EV or combustion: your vehicle's panels are computed individually by our Materials Science Department, treated by our partner facility in Zhuhai, and signed off against measured acoustic acceptance criteria — before you pay the balance.</span><span class="L zt">我們把車艙噪音當作結構動力學問題來解 —— 而每一台車都是不同的結構。鋼或鋁、房車或 SUV、電車或油車：你的車由美國材料科學部門逐車計算、珠海合作工場施工，並以「量測數據合格」作為交車與尾款條件 —— 不是憑感覺的隔音改裝。</span><span class="L zs">我们把车舱噪音当作结构动力学问题来解 —— 而每一台车都是不同的结构。钢或铝、轿车或 SUV、电车或油车：你的车由美国材料科学部门逐车计算、珠海合作工场施工，并以「测量数据合格」作为交车与尾款条件 —— 不是凭感觉的隔音改装。</span><span class="L it">Trattiamo il rumore in abitacolo come un problema di dinamica strutturale — e ogni auto è una struttura diversa. Acciaio o alluminio, berlina o SUV, elettrica o termica: i pannelli del tuo veicolo vengono calcolati individualmente dal nostro Materials Science Department, trattati presso la nostra struttura partner di Zhuhai e certificati secondo criteri di collaudo acustico misurati — prima che tu versi il saldo.</span><span class="L ja">私たちは車内騒音を構造動力学の問題として扱います。そして、すべての車は異なる構造体です。鋼かアルミか、セダンかSUVか、EVか内燃機か —— お客様の車のパネルは当社材料科学部門が個別に計算し、珠海のパートナー工場で施工。実測による検収基準に合格して初めて残金をお支払いいただきます。</span></p>
+  <a class="cta" href="#contact"><span class="L en">Request a consultation</span><span class="L zt">預約諮詢</span><span class="L zs">预约咨询</span><span class="L it">Richiedi una consulenza</span><span class="L ja">ご相談はこちら</span></a>
+  <a class="cta ghost" href="#science"><span class="L en">See the engineering ↓</span><span class="L zt">看工程計算 ↓</span><span class="L zs">看工程计算 ↓</span><span class="L it">Guarda l'ingegneria ↓</span><span class="L ja">エンジニアリングを見る ↓</span></a>
+  <div class="herostats">
+   <div class="hs"><div class="v">45×</div><div class="l"><span class="L en">Panel damping uplift at 200 Hz — reference build, aluminium door skin</span><span class="L zt">200 Hz 鈑金阻尼提升 —— 鋁門參考計算</span><span class="L zs">200 Hz 钣金阻尼提升 —— 铝门参考计算</span><span class="L it">Incremento dello smorzamento a 200 Hz — configurazione di riferimento, porta in alluminio</span><span class="L ja">200 Hz におけるパネル減衰の向上 —— アルミドア基準計算</span></div></div>
+   <div class="hs"><div class="v">−1.5 dB(A)</div><div class="l"><span class="L en">Minimum accepted cruise-noise reduction at 80 km/h</span><span class="L zt">80 km/h 巡航噪音驗收下限</span><span class="L zs">80 km/h 巡航噪音验收下限</span><span class="L it">Riduzione minima del rumore di crociera a 80 km/h</span><span class="L ja">80 km/h 巡航騒音の検収下限値</span></div></div>
+   <div class="hs"><div class="v">−3 dB</div><div class="l"><span class="L en">Minimum in the 100–315 Hz third-octave band</span><span class="L zt">100–315 Hz 頻帶驗收下限</span><span class="L zs">100–315 Hz 频带验收下限</span><span class="L it">Minimo nella banda in terzi d’ottava 100–315 Hz</span><span class="L ja">100–315 Hz 帯域の検収下限値</span></div></div>
+   <div class="hs"><div class="v">100%</div><div class="l"><span class="L en">Batches flame-tested to verify true butyl before install</span><span class="L zt">每批膠料到貨燃燒驗真</span><span class="L zs">每批胶料到货燃烧验真</span><span class="L it">Ogni lotto testato alla fiamma per verificare il vero butile</span><span class="L ja">全ロットを施工前に燃焼試験で真正ブチルと確認</span></div></div>
+  </div>
+ </div>
+</div>
+
+<section id="science">
+ <div class="sec-in">
+  <p class="sec-tag"><span class="L en">01 · Structural Dynamics</span><span class="L zt">01 · 結構動力學</span><span class="L zs">01 · 结构动力学</span><span class="L it">01 · Dinamica Strutturale</span><span class="L ja">01 · 構造動力学</span></p>
+  <h2><span class="L en">The physics we design to — shown, not hidden.</span><span class="L zt">我們據以設計的物理 —— 全部公開，絕不藏私。</span><span class="L zs">我们据以设计的物理 —— 全部公开，绝不藏私。</span><span class="L it">La fisica su cui progettiamo — mostrata, non nascosta.</span><span class="L ja">設計の根拠となる物理 —— 隠さず、すべて公開。</span></h2>
+  <p class="intro"><span class="L en">Most soundproofing shops sell square metres. We design a three-layer composite — your car's panel, a viscoelastic butyl core, and an aluminium constraining foil — and compute its damping performance with the Ross–Kerwin–Ungar (RKU) shear-damping model before a single sheet is cut. A steel door (E = 200 GPa) and an aluminium door (E = 70 GPa) are different structures with different optima — which is why we run the calculation per vehicle, never per catalogue.</span><span class="L zt">一般隔音店賣的是「幾平方米」。我們設計的是三層複合結構 —— 你的車門鈑金、丁基黏彈核心、鋁約束層 —— 並在裁下第一片材料前，先以 RKU 剪切阻尼模型算出表現。鋼門（E=200 GPa）與鋁門（E=70 GPa）是完全不同的結構、有不同的最佳解 —— 所以我們逐車計算，不查型錄。</span><span class="L zs">一般隔音店卖的是「几平方米」。我们设计的是三层复合结构 —— 你的车门钣金、丁基粘弹核心、铝约束层 —— 并在裁下第一片材料前，先以 RKU 剪切阻尼模型算出表现。钢门（E=200 GPa）与铝门（E=70 GPa）是完全不同的结构、有不同的最优解 —— 所以我们逐车计算，不查型录。</span><span class="L it">La maggior parte dei centri vende metri quadrati. Noi progettiamo un composito a tre strati — il pannello della tua auto, un nucleo viscoelastico in butile e una lamina di vincolo in alluminio — e ne calcoliamo lo smorzamento con il modello Ross–Kerwin–Ungar (RKU) prima di tagliare un solo foglio. Una porta in acciaio (E = 200 GPa) e una in alluminio (E = 70 GPa) sono strutture diverse con ottimi diversi: per questo il calcolo si fa per veicolo, mai da catalogo.</span><span class="L ja">多くの防音業者は「面積」を売ります。私たちは三層複合構造 —— 車体パネル、粘弾性ブチルコア、アルミ拘束層 —— を設計し、材料を切る前に Ross–Kerwin–Ungar（RKU）せん断減衰モデルで性能を計算します。鋼のドア（E=200 GPa）とアルミのドア（E=70 GPa）は最適解の異なる別の構造体。だからカタログではなく、一台ごとに計算します。</span></p>
+  <div class="eq"><span class="L en">Composite loss factor</span><span class="L zt">複合損失係數</span><span class="L zs">复合损失系数</span><span class="L it">Fattore di perdita composito</span><span class="L ja">複合損失係数</span>　η<sub>c</sub> = η₂YX / [ 1 + (2+Y)X + (1+Y)(1+η₂²)X² ]
+<span class="L en">Shear parameter</span><span class="L zt">剪切參數</span><span class="L zs">剪切参数</span><span class="L it">Parametro di taglio</span><span class="L ja">せん断パラメータ</span>　X = G′₂ / (k<sub>n</sub>²·H₂·E₃H₃)　　<span class="L en">Geometric stiffness</span><span class="L zt">幾何剛性參數</span><span class="L zs">几何刚度参数</span><span class="L it">Rigidezza geometrica</span><span class="L ja">幾何剛性パラメータ</span>　Y = d²·(E₁H₁·E₃H₃)/(E₁H₁+E₃H₃) ÷ D₁₃
+<span class="L en">d = distance between the neutral axes of layers 1 &amp; 3 · k<sub>n</sub> = bending wavenumber of the base panel · D₁₃ = combined flexural rigidity</span><span class="L zt">d = 第 1、3 層中性軸間距 · k<sub>n</sub> = 基板彎曲波數 · D₁₃ = 合成彎曲剛度</span><span class="L zs">d = 第 1、3 层中性轴间距 · k<sub>n</sub> = 基板弯曲波数 · D₁₃ = 合成弯曲刚度</span><span class="L it">d = distanza tra gli assi neutri degli strati 1 e 3 · k<sub>n</sub> = numero d’onda flessionale del pannello · D₁₃ = rigidezza flessionale combinata</span><span class="L ja">d = 第1層と第3層の中立軸間距離 · k<sub>n</sub> = 基板の曲げ波数 · D₁₃ = 合成曲げ剛性</span></div>
+  <table>
+   <thead><tr><th><span class="L en">Design layer</span><span class="L zt">設計層</span><span class="L zs">设计层</span><span class="L it">Strato</span><span class="L ja">設計層</span></th><th><span class="L en">Specification</span><span class="L zt">規格</span><span class="L zs">规格</span><span class="L it">Specifica</span><span class="L ja">仕様</span></th><th><span class="L en">Role</span><span class="L zt">作用</span><span class="L zs">作用</span><span class="L it">Funzione</span><span class="L ja">役割</span></th></tr></thead>
+   <tbody>
+    <tr><td><span class="L en">Base — vehicle panel</span><span class="L zt">基板 —— 車體鈑金</span><span class="L zs">基板 —— 车体钣金</span><span class="L it">Base — pannello del veicolo</span><span class="L ja">基板 —— 車体パネル</span></td><td><span class="L en">Reference: Al, H₁ = 1.2 mm, E₁ = 70 GPa · steel computed at E = 200 GPa</span><span class="L zt">參考結構：鋁 H₁=1.2 mm、E₁=70 GPa；鋼件以 E=200 GPa 計算</span><span class="L zs">参考结构：铝 H₁=1.2 mm、E₁=70 GPa；钢件以 E=200 GPa 计算</span><span class="L it">Riferimento: Al, H₁ = 1,2 mm, E₁ = 70 GPa · acciaio calcolato a E = 200 GPa</span><span class="L ja">基準：アルミ H₁=1.2 mm、E₁=70 GPa · 鋼は E=200 GPa で計算</span></td><td><span class="L en">The resonating structure — measured &amp; computed per vehicle</span><span class="L zt">被阻尼的共振結構 —— 逐車量測與計算</span><span class="L zs">被阻尼的共振结构 —— 逐车测量与计算</span><span class="L it">La struttura risonante — misurata e calcolata per veicolo</span><span class="L ja">減衰対象の共振構造 —— 一台ごとに計測・計算</span></td></tr>
+    <tr><td><span class="L en">Core — verified butyl</span><span class="L zt">核心 —— 驗證丁基</span><span class="L zs">核心 —— 验证丁基</span><span class="L it">Nucleo — butile verificato</span><span class="L ja">コア —— 検証済みブチル</span></td><td><span class="L en">H₂ = 2.0 mm, η₂ = 0.85, G′₂ = 1.0 MPa</span><span class="L zt">H₂ = 2.0 mm、η₂ = 0.85、G′₂ = 1.0 MPa</span><span class="L zs">H₂ = 2.0 mm、η₂ = 0.85、G′₂ = 1.0 MPa</span><span class="L it">H₂ = 2,0 mm, η₂ = 0,85, G′₂ = 1,0 MPa</span><span class="L ja">H₂ = 2.0 mm、η₂ = 0.85、G′₂ = 1.0 MPa</span></td><td><span class="L en">Converts shear strain to heat every cycle: W<sub>d</sub> = ∫<sub>V</sub> πG″₂γ₀² dV</span><span class="L zt">每一週期將剪切應變轉為熱：W<sub>d</sub> = ∫<sub>V</sub> πG″₂γ₀² dV</span><span class="L zs">每一周期将剪切应变转为热：W<sub>d</sub> = ∫<sub>V</sub> πG″₂γ₀² dV</span><span class="L it">Converte la deformazione a taglio in calore a ogni ciclo: W<sub>d</sub> = ∫<sub>V</sub> πG″₂γ₀² dV</span><span class="L ja">せん断ひずみを毎サイクル熱に変換：W<sub>d</sub> = ∫<sub>V</sub> πG″₂γ₀² dV</span></td></tr>
+    <tr><td><span class="L en">Constraint — Al foil</span><span class="L zt">約束層 —— 鋁箔</span><span class="L zs">约束层 —— 铝箔</span><span class="L it">Vincolo — lamina di Al</span><span class="L ja">拘束層 —— アルミ箔</span></td><td><span class="L en">H₃ = 0.10 mm (engineered optimum)</span><span class="L zt">H₃ = 0.10 mm（工程最佳點）</span><span class="L zs">H₃ = 0.10 mm（工程最优点）</span><span class="L it">H₃ = 0,10 mm (ottimo ingegneristico)</span><span class="L ja">H₃ = 0.10 mm（工学的最適値）</span></td><td><span class="L en">Forces the core into shear; Y = 4.50</span><span class="L zt">強迫核心進入剪切；Y = 4.50</span><span class="L zs">强迫核心进入剪切；Y = 4.50</span><span class="L it">Forza il nucleo in taglio; Y = 4,50</span><span class="L ja">コアにせん断を強制；Y = 4.50</span></td></tr>
+   </tbody>
+  </table>
+  <figure>
+  <svg class="chart" viewBox="0 0 760 330" role="img" aria-label="Composite loss factor vs frequency">
+<line x1="58" y1="284.0" x2="738" y2="284.0" class="grid"/>
+<text x="48" y="288.0" class="tick ta-end">0.0</text>
+<line x1="58" y1="217.5" x2="738" y2="217.5" class="grid"/>
+<text x="48" y="221.5" class="tick ta-end">0.1</text>
+<line x1="58" y1="151.0" x2="738" y2="151.0" class="grid"/>
+<text x="48" y="155.0" class="tick ta-end">0.2</text>
+<line x1="58" y1="84.5" x2="738" y2="84.5" class="grid"/>
+<text x="48" y="88.5" class="tick ta-end">0.3</text>
+<line x1="58" y1="18.0" x2="738" y2="18.0" class="grid"/>
+<text x="48" y="22.0" class="tick ta-end">0.4</text>
+<text x="58.0" y="306" class="tick ta-mid">20</text>
+<text x="193.3" y="306" class="tick ta-mid">50</text>
+<text x="295.6" y="306" class="tick ta-mid">100</text>
+<text x="398.0" y="306" class="tick ta-mid">200</text>
+<text x="533.3" y="306" class="tick ta-mid">500</text>
+<text x="635.6" y="306" class="tick ta-mid">1000</text>
+<text x="738.0" y="306" class="tick ta-mid">2000</text>
+<line x1="58" y1="18" x2="58" y2="284" class="axis"/>
+<line x1="58" y1="284" x2="738" y2="284" class="axis"/>
+<rect x="262.7" y="18" width="195.2" height="266" class="band"/>
+<text x="360.3" y="31" class="bandlab ta-mid L en">Door-slam &amp; low-frequency boom · 80–300 Hz</text>
+<text x="360.3" y="31" class="bandlab ta-mid L zt">關門聲／低頻轟鳴 80–300 Hz</text>
+<text x="360.3" y="31" class="bandlab ta-mid L zs">关门声／低频轰鸣 80–300 Hz</text>
+<text x="360.3" y="31" class="bandlab ta-mid L it">Chiusura porta e rombo a bassa frequenza · 80–300 Hz</text>
+<text x="360.3" y="31" class="bandlab ta-mid L ja">ドア閉鎖音／低周波こもり音 80–300 Hz</text>
+<path d="M 58.0 229.2 L 62.3 228.6 L 66.6 228.0 L 70.8 227.4 L 75.1 226.8 L 79.4 226.3 L 83.7 225.7 L 87.9 225.2 L 92.2 224.7 L 96.5 224.2 L 100.8 223.7 L 105.0 223.2 L 109.3 222.8 L 113.6 222.3 L 117.9 221.9 L 122.2 221.5 L 126.4 221.1 L 130.7 220.8 L 135.0 220.4 L 139.3 220.1 L 143.5 219.8 L 147.8 219.6 L 152.1 219.3 L 156.4 219.1 L 160.6 218.9 L 164.9 218.7 L 169.2 218.5 L 173.5 218.4 L 177.7 218.2 L 182.0 218.2 L 186.3 218.1 L 190.6 218.0 L 194.9 218.0 L 199.1 218.0 L 203.4 218.0 L 207.7 218.1 L 212.0 218.1 L 216.2 218.2 L 220.5 218.4 L 224.8 218.5 L 229.1 218.7 L 233.3 218.8 L 237.6 219.0 L 241.9 219.3 L 246.2 219.5 L 250.5 219.8 L 254.7 220.1 L 259.0 220.4 L 263.3 220.7 L 267.6 221.1 L 271.8 221.5 L 276.1 221.9 L 280.4 222.3 L 284.7 222.7 L 288.9 223.2 L 293.2 223.6 L 297.5 224.1 L 301.8 224.6 L 306.1 225.1 L 310.3 225.7 L 314.6 226.2 L 318.9 226.8 L 323.2 227.3 L 327.4 227.9 L 331.7 228.5 L 336.0 229.1 L 340.3 229.7 L 344.5 230.4 L 348.8 231.0 L 353.1 231.6 L 357.4 232.3 L 361.6 233.0 L 365.9 233.6 L 370.2 234.3 L 374.5 235.0 L 378.8 235.7 L 383.0 236.3 L 387.3 237.0 L 391.6 237.7 L 395.9 238.4 L 400.1 239.1 L 404.4 239.8 L 408.7 240.5 L 413.0 241.2 L 417.2 241.9 L 421.5 242.6 L 425.8 243.3 L 430.1 244.0 L 434.4 244.7 L 438.6 245.4 L 442.9 246.1 L 447.2 246.8 L 451.5 247.4 L 455.7 248.1 L 460.0 248.8 L 464.3 249.4 L 468.6 250.1 L 472.8 250.8 L 477.1 251.4 L 481.4 252.1 L 485.7 252.7 L 489.9 253.3 L 494.2 253.9 L 498.5 254.6 L 502.8 255.2 L 507.1 255.8 L 511.3 256.4 L 515.6 257.0 L 519.9 257.5 L 524.2 258.1 L 528.4 258.7 L 532.7 259.2 L 537.0 259.8 L 541.3 260.3 L 545.5 260.8 L 549.8 261.4 L 554.1 261.9 L 558.4 262.4 L 562.7 262.9 L 566.9 263.4 L 571.2 263.8 L 575.5 264.3 L 579.8 264.8 L 584.0 265.2 L 588.3 265.7 L 592.6 266.1 L 596.9 266.6 L 601.1 267.0 L 605.4 267.4 L 609.7 267.8 L 614.0 268.2 L 618.3 268.6 L 622.5 269.0 L 626.8 269.3 L 631.1 269.7 L 635.4 270.0 L 639.6 270.4 L 643.9 270.7 L 648.2 271.1 L 652.5 271.4 L 656.7 271.7 L 661.0 272.0 L 665.3 272.3 L 669.6 272.6 L 673.8 272.9 L 678.1 273.2 L 682.4 273.5 L 686.7 273.8 L 691.0 274.0 L 695.2 274.3 L 699.5 274.5 L 703.8 274.8 L 708.1 275.0 L 712.3 275.3 L 716.6 275.5 L 720.9 275.7 L 725.2 275.9 L 729.4 276.2 L 733.7 276.4 L 738.0 276.6" class="s3"/>
+<path d="M 58.0 138.7 L 62.3 136.5 L 66.6 134.3 L 70.8 132.2 L 75.1 130.0 L 79.4 127.9 L 83.7 125.8 L 87.9 123.7 L 92.2 121.7 L 96.5 119.6 L 100.8 117.6 L 105.0 115.7 L 109.3 113.8 L 113.6 111.9 L 117.9 110.0 L 122.2 108.2 L 126.4 106.5 L 130.7 104.8 L 135.0 103.1 L 139.3 101.5 L 143.5 99.9 L 147.8 98.4 L 152.1 97.0 L 156.4 95.6 L 160.6 94.3 L 164.9 93.1 L 169.2 91.9 L 173.5 90.7 L 177.7 89.7 L 182.0 88.7 L 186.3 87.8 L 190.6 87.0 L 194.9 86.2 L 199.1 85.6 L 203.4 85.0 L 207.7 84.5 L 212.0 84.0 L 216.2 83.7 L 220.5 83.4 L 224.8 83.2 L 229.1 83.1 L 233.3 83.0 L 237.6 83.1 L 241.9 83.2 L 246.2 83.4 L 250.5 83.7 L 254.7 84.1 L 259.0 84.6 L 263.3 85.1 L 267.6 85.7 L 271.8 86.4 L 276.1 87.2 L 280.4 88.0 L 284.7 88.9 L 288.9 89.9 L 293.2 91.0 L 297.5 92.1 L 301.8 93.3 L 306.1 94.6 L 310.3 95.9 L 314.6 97.3 L 318.9 98.8 L 323.2 100.3 L 327.4 101.8 L 331.7 103.4 L 336.0 105.1 L 340.3 106.8 L 344.5 108.6 L 348.8 110.4 L 353.1 112.3 L 357.4 114.2 L 361.6 116.1 L 365.9 118.1 L 370.2 120.1 L 374.5 122.1 L 378.8 124.2 L 383.0 126.2 L 387.3 128.4 L 391.6 130.5 L 395.9 132.6 L 400.1 134.8 L 404.4 137.0 L 408.7 139.2 L 413.0 141.4 L 417.2 143.6 L 421.5 145.8 L 425.8 148.0 L 430.1 150.2 L 434.4 152.4 L 438.6 154.7 L 442.9 156.9 L 447.2 159.1 L 451.5 161.3 L 455.7 163.5 L 460.0 165.7 L 464.3 167.8 L 468.6 170.0 L 472.8 172.1 L 477.1 174.3 L 481.4 176.4 L 485.7 178.5 L 489.9 180.6 L 494.2 182.6 L 498.5 184.7 L 502.8 186.7 L 507.1 188.7 L 511.3 190.7 L 515.6 192.6 L 519.9 194.6 L 524.2 196.5 L 528.4 198.4 L 532.7 200.2 L 537.0 202.0 L 541.3 203.8 L 545.5 205.6 L 549.8 207.4 L 554.1 209.1 L 558.4 210.8 L 562.7 212.5 L 566.9 214.1 L 571.2 215.7 L 575.5 217.3 L 579.8 218.9 L 584.0 220.4 L 588.3 221.9 L 592.6 223.4 L 596.9 224.8 L 601.1 226.2 L 605.4 227.6 L 609.7 229.0 L 614.0 230.3 L 618.3 231.6 L 622.5 232.9 L 626.8 234.2 L 631.1 235.4 L 635.4 236.6 L 639.6 237.8 L 643.9 239.0 L 648.2 240.1 L 652.5 241.2 L 656.7 242.3 L 661.0 243.4 L 665.3 244.4 L 669.6 245.4 L 673.8 246.4 L 678.1 247.4 L 682.4 248.3 L 686.7 249.2 L 691.0 250.1 L 695.2 251.0 L 699.5 251.9 L 703.8 252.7 L 708.1 253.5 L 712.3 254.3 L 716.6 255.1 L 720.9 255.9 L 725.2 256.6 L 729.4 257.4 L 733.7 258.1 L 738.0 258.8" class="s1"/>
+<circle cx="193.3" cy="86.5" r="4.5" class="dot"><title>50 Hz — η_c = 0.297</title></circle>
+<circle cx="295.6" cy="91.6" r="4.5" class="dot"><title>100 Hz — η_c = 0.289</title></circle>
+<circle cx="398.0" cy="133.7" r="4.5" class="dot"><title>200 Hz — η_c = 0.226</title></circle>
+<circle cx="457.9" cy="164.6" r="4.5" class="dot"><title>300 Hz — η_c = 0.180</title></circle>
+<circle cx="533.3" cy="200.5" r="4.5" class="dot"><title>500 Hz — η_c = 0.126</title></circle>
+<circle cx="635.6" cy="236.7" r="4.5" class="dot"><title>1000 Hz — η_c = 0.071</title></circle>
+<text x="84.9" y="145.2" class="slab s1t L en">Henderson verified butyl · η₂ = 0.85</text>
+<text x="84.9" y="145.2" class="slab s1t L zt">Henderson 驗證丁基 · η₂ = 0.85</text>
+<text x="84.9" y="145.2" class="slab s1t L zs">Henderson 验证丁基 · η₂ = 0.85</text>
+<text x="84.9" y="145.2" class="slab s1t L it">Butile verificato Henderson · η₂ = 0,85</text>
+<text x="84.9" y="145.2" class="slab s1t L ja">Henderson 検証ブチル · η₂ = 0.85</text>
+<text x="84.9" y="244.6" class="slab s3t L en">Commodity asphalt sheet · η₂ ≈ 0.25</text>
+<text x="84.9" y="244.6" class="slab s3t L zt">市售瀝青板 · η₂ ≈ 0.25</text>
+<text x="84.9" y="244.6" class="slab s3t L zs">市售沥青板 · η₂ ≈ 0.25</text>
+<text x="84.9" y="244.6" class="slab s3t L it">Foglio bituminoso commerciale · η₂ ≈ 0,25</text>
+<text x="84.9" y="244.6" class="slab s3t L ja">市販アスファルトシート · η₂ ≈ 0.25</text>
+<text x="398.0" y="326" class="axlab ta-mid L en">Frequency (Hz), log scale</text>
+<text x="398.0" y="326" class="axlab ta-mid L zt">頻率 (Hz)，對數座標</text>
+<text x="398.0" y="326" class="axlab ta-mid L zs">频率 (Hz)，对数坐标</text>
+<text x="398.0" y="326" class="axlab ta-mid L it">Frequenza (Hz), scala logaritmica</text>
+<text x="398.0" y="326" class="axlab ta-mid L ja">周波数 (Hz)、対数軸</text>
+<text transform="translate(14,151.0) rotate(-90)" class="axlab ta-mid L en">Composite loss factor η_c</text>
+<text transform="translate(14,151.0) rotate(-90)" class="axlab ta-mid L zt">複合損失係數 η_c</text>
+<text transform="translate(14,151.0) rotate(-90)" class="axlab ta-mid L zs">复合损失系数 η_c</text>
+<text transform="translate(14,151.0) rotate(-90)" class="axlab ta-mid L it">Fattore di perdita composito η_c</text>
+<text transform="translate(14,151.0) rotate(-90)" class="axlab ta-mid L ja">複合損失係数 η_c</text>
+</svg>
+  <figcaption><b><span class="L en">Fig. 1 — Composite loss factor vs frequency, computed for our aluminium-door reference build (RKU model). Your vehicle receives its own curve.</span><span class="L zt">圖 1 —— 鋁門參考結構之複合損失係數頻率響應（RKU 模型）；你的車會有專屬計算曲線。</span><span class="L zs">图 1 —— 铝门参考结构之复合损失系数频率响应（RKU 模型）；你的车会有专属计算曲线。</span><span class="L it">Fig. 1 — Fattore di perdita composito vs frequenza, calcolato per la configurazione di riferimento (modello RKU). Il tuo veicolo riceve la propria curva.</span><span class="L ja">図 1 —— アルミドア基準構造の複合損失係数の周波数応答（RKUモデル）。お客様の車には専用の計算曲線が作成されます。</span></b> <span class="L en">Deliberately optimized for the 80–300 Hz door-slam and boom band. Green dashed: the commodity asphalt sheet much of the market installs under a “butyl” label — under one third of the damping.</span><span class="L zt">設計刻意最佳化於 80–300 Hz 關門聲與轟鳴頻段；綠虛線為市場上以「丁基」名義出售的瀝青板 —— 阻尼不到三分之一。</span><span class="L zs">设计刻意最优化于 80–300 Hz 关门声与轰鸣频段；绿虚线为市场上以「丁基」名义出售的沥青板 —— 阻尼不到三分之一。</span><span class="L it">Ottimizzato deliberatamente per la banda 80–300 Hz. Linea verde tratteggiata: il foglio bituminoso venduto come “butile” da gran parte del mercato — meno di un terzo dello smorzamento.</span><span class="L ja">80–300 Hz のドア閉鎖音・こもり音帯域に意図的に最適化。緑の破線は市場で「ブチル」として売られるアスファルトシート —— 減衰は 3 分の 1 未満。</span></figcaption>
+  </figure>
+  <div class="grid2">
+   <div class="card"><h3><span class="L en">Designed at the knee of the curve</span><span class="L zt">設計在曲線的膝點上</span><span class="L zs">设计在曲线的膝点上</span><span class="L it">Progettato al ginocchio della curva</span><span class="L ja">曲線の膝点で設計</span></h3>
+    <p style="font-size:14px"><span class="L en">Our parameter sweep shows constraining-foil benefit saturates: 0.10 mm reaches η<sub>c</sub> = 0.226 at 200 Hz — within 5% of foils 50% thicker, while conforming to curved panels. We spend the specification budget where the physics pays: <b>core authenticity and antinode placement, not foil vanity thickness.</b></span><span class="L zt">參數掃描顯示約束層增厚效益早已飽和：0.10 mm 已達厚 50% 箔材 95% 的效果，而貼合性遠勝。規格預算花在物理真正回報的地方 —— <b>膠料真偽與反節點佈位，而非「箔越厚越好」的行銷話術。</b></span><span class="L zs">参数扫描显示约束层增厚效益早已饱和：0.10 mm 已达厚 50% 箔材 95% 的效果，而贴合性远胜。规格预算花在物理真正回报的地方 —— <b>胶料真伪与反节点布位，而非「箔越厚越好」的营销话术。</b></span><span class="L it">La nostra scansione parametrica mostra che il beneficio della lamina satura: 0,10 mm raggiunge η<sub>c</sub> = 0,226 a 200 Hz — entro il 5% di lamine più spesse del 50%, aderendo però ai pannelli curvi. Il budget di specifica va dove la fisica rende: <b>autenticità del nucleo e posizionamento sugli antinodi, non spessore di facciata.</b></span><span class="L ja">パラメータ掃引の結果、拘束箔の効果は飽和します：0.10 mm で 200 Hz の η<sub>c</sub> = 0.226 に到達 —— 50%厚い箔との差は 5%以内、しかも曲面への追従性は圧倒的。仕様予算は物理が報いる所に使います：<b>箔の見栄え厚ではなく、コアの真正性と腹（アンチノード）配置に。</b></span></p></div>
+   <div class="card"><h3><span class="L en">Antinode-targeted coverage</span><span class="L zt">反節點針對性覆蓋</span><span class="L zs">反节点针对性覆盖</span><span class="L it">Copertura mirata agli antinodi</span><span class="L ja">アンチノード狙い撃ち施工</span></h3>
+    <p style="font-size:14px"><span class="L en">Damping happens where panels move. Our installers map each panel by acoustic knock response and place 30–50% targeted coverage at vibration antinodes — retaining ~80–90% of full-coverage damping while saving over 20 kg of dead mass your suspension never asked to carry.</span><span class="L zt">阻尼發生在振幅最大處。我們以敲擊定位反節點、做 30–50% 針對性覆蓋 —— 保留約八九成效果，同時省下 20 kg 以上懸吊從沒要求要背的無效質量。</span><span class="L zs">阻尼发生在振幅最大处。我们以敲击定位反节点、做 30–50% 针对性覆盖 —— 保留约八九成效果，同时省下 20 kg 以上悬挂从没要求要背的无效质量。</span><span class="L it">Lo smorzamento avviene dove il pannello si muove. Mappiamo ogni pannello con la risposta alla percussione e applichiamo una copertura mirata del 30–50% sugli antinodi — conservando l’80–90% dell’effetto e risparmiando oltre 20 kg di massa inutile.</span><span class="L ja">減衰はパネルが動く場所で起きます。打診でパネルをマッピングし、振動の腹に 30–50% の狙い撃ち施工 —— 全面貼りの約 8〜9 割の効果を保ちながら、サスペンションが望まない 20 kg 超のデッドマスを削減。</span></p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="chemistry">
+ <div class="sec-in">
+  <p class="sec-tag"><span class="L en">02 · Interface Chemistry</span><span class="L zt">02 · 界面化學</span><span class="L zs">02 · 界面化学</span><span class="L it">02 · Chimica delle Interfacce</span><span class="L ja">02 · 界面化学</span></p>
+  <h2><span class="L en">Adhesion is chemistry. We engineer it to never let go.</span><span class="L zt">黏著是化學。我們把它工程化到永不脫落。</span><span class="L zs">粘着是化学。我们把它工程化到永不脱落。</span><span class="L it">L'adesione è chimica. La progettiamo per non cedere mai.</span><span class="L ja">接着は化学。決して剥がれないよう設計します。</span></h2>
+  <p class="intro"><span class="L en">A damping sheet that creeps or peels is worthless. Permanent bonding to a metal body is a surface-thermodynamics problem, and we treat it as one.</span><span class="L zt">會蠕變、會脫落的阻尼板一文不值。與金屬車體的永久結合是表面熱力學問題，我們就用表面熱力學來解。</span><span class="L zs">会蠕变、会脱落的阻尼板一文不值。与金属车体的永久结合是表面热力学问题，我们就用表面热力学来解。</span><span class="L it">Un foglio smorzante che scorre o si stacca non vale nulla. Il legame permanente con la scocca è un problema di termodinamica delle superfici, e come tale lo trattiamo.</span><span class="L ja">クリープし剥がれる制振材に価値はありません。金属ボディとの恒久接着は表面熱力学の問題 —— 私たちはそれを表面熱力学で解きます。</span></p>
+  <div class="grid3">
+   <div class="card"><div class="step"><span class="L en">Polymer physics</span><span class="L zt">高分子物理</span><span class="L zs">高分子物理</span><span class="L it">Fisica dei polimeri</span><span class="L ja">高分子物理</span></div><h3><span class="L en">Polyisobutylene backbone</span><span class="L zt">聚異丁烯主鏈</span><span class="L zs">聚异丁烯主链</span><span class="L it">Scheletro poliisobutilenico</span><span class="L ja">ポリイソブチレン主鎖</span></h3>
+    <p style="font-size:14px"><span class="L en">Our core is an IIR-based compound built on −[CH₂−C(CH₃)₂]<sub>n</sub>− chains. Twin methyl groups create steric hindrance and massive internal segmental friction (T<sub>g</sub> ≈ −60 °C), with tackifying resins broadening the damping peak across the −10 to 50 °C service window. Asphalt sheets soften and sag above 60 °C — a summer door cavity. Ours don’t.</span><span class="L zt">核心為 IIR 基材，主鏈 −[CH₂−C(CH₃)₂]<sub>n</sub>−。雙甲基立體位阻帶來巨大鏈段內摩擦（T<sub>g</sub> ≈ −60 °C），增黏樹脂把阻尼峰展寬至 −10 ~ 50 °C 工作溫區。瀝青板在 60 °C 以上（夏季門腔）軟化下垂 —— 我們的不會。</span><span class="L zs">核心为 IIR 基材，主链 −[CH₂−C(CH₃)₂]<sub>n</sub>−。双甲基立体位阻带来巨大链段内摩擦（T<sub>g</sub> ≈ −60 °C），增粘树脂把阻尼峰展宽至 −10 ~ 50 °C 工作温区。沥青板在 60 °C 以上（夏季门腔）软化下垂 —— 我们的不会。</span><span class="L it">Il nucleo è un compound a base IIR su catene −[CH₂−C(CH₃)₂]<sub>n</sub>−. I gruppi metilici gemelli creano ingombro sterico ed enorme attrito segmentale interno (T<sub>g</sub> ≈ −60 °C); le resine tackificanti allargano il picco di smorzamento nella finestra −10 / 50 °C. I fogli bituminosi si ammorbidiscono sopra i 60 °C — una portiera d’estate. I nostri no.</span><span class="L ja">コアは −[CH₂−C(CH₃)₂]<sub>n</sub>− 鎖の IIR 系コンパウンド。双子のメチル基が立体障害と巨大な内部セグメント摩擦を生み（T<sub>g</sub> ≈ −60 °C）、粘着付与樹脂が減衰ピークを −10〜50 °C の実用域へ拡張。アスファルトは 60 °C 超（夏のドア内）で軟化・垂下しますが、当社のコアは変わりません。</span></p></div>
+   <div class="card"><div class="step"><span class="L en">Surface thermodynamics</span><span class="L zt">表面熱力學</span><span class="L zs">表面热力学</span><span class="L it">Termodinamica di superficie</span><span class="L ja">表面熱力学</span></div><h3><span class="L en">Young's wetting condition</span><span class="L zt">Young 潤濕條件</span><span class="L zs">Young 润湿条件</span><span class="L it">Condizione di bagnabilità di Young</span><span class="L ja">Young の濡れ条件</span></h3>
+    <p style="font-size:14px"><span class="L en">γ<sub>SV</sub> − γ<sub>SL</sub> = γ<sub>LV</sub> cos θ. High-energy metal-oxide surfaces wet; any hydrocarbon film collapses wetting. Every bond area is degreased with 99% isopropyl alcohol — never aggressive brake cleaners that attack trim polymers and harness insulation — restoring the surface for van der Waals bonding.</span><span class="L zt">γ<sub>SV</sub> − γ<sub>SL</sub> = γ<sub>LV</sub> cos θ。高表面能金屬氧化物才能潤濕；殘油會毀掉潤濕。所有貼合面只用 99% 異丙醇脫脂 —— 不用會侵蝕內飾與線束的煞車清潔劑 —— 恢復凡得瓦鍵結所需的高能表面。</span><span class="L zs">γ<sub>SV</sub> − γ<sub>SL</sub> = γ<sub>LV</sub> cos θ。高表面能金属氧化物才能润湿；残油会毁掉润湿。所有贴合面只用 99% 异丙醇脱脂 —— 不用会侵蚀内饰与线束的刹车清洁剂 —— 恢复范德华键结所需的高能表面。</span><span class="L it">γ<sub>SV</sub> − γ<sub>SL</sub> = γ<sub>LV</sub> cos θ. Le superfici ossido-metalliche ad alta energia si bagnano; qualsiasi film idrocarburico distrugge la bagnabilità. Ogni area di incollaggio è sgrassata con alcol isopropilico al 99% — mai detergenti freni aggressivi che attaccano polimeri e isolamenti — ripristinando la superficie per il legame di van der Waals.</span><span class="L ja">γ<sub>SV</sub> − γ<sub>SL</sub> = γ<sub>LV</sub> cos θ。高エネルギーの金属酸化物表面だけが濡れます。炭化水素膜は濡れ性を崩壊させるため、接着面はすべて 99% イソプロピルアルコールで脱脂 —— 内装や配線を侵す強溶剤のブレーキクリーナーは使いません —— ファンデルワールス結合に必要な表面を回復させます。</span></p></div>
+   <div class="card"><div class="step"><span class="L en">Pressure-sensitive bonding</span><span class="L zt">壓敏結合</span><span class="L zs">压敏结合</span><span class="L it">Adesione a pressione</span><span class="L ja">感圧接着</span></div><h3><span class="L en">Dahlquist criterion + interlock</span><span class="L zt">Dahlquist 準則 + 機械互鎖</span><span class="L zs">Dahlquist 准则 + 机械互锁</span><span class="L it">Criterio di Dahlquist + interlock</span><span class="L ja">Dahlquist 基準 + 機械的噛み合い</span></h3>
+    <p style="font-size:14px"><span class="L en">Butyl bonds as a pressure-sensitive adhesive: tack requires G′ ≲ 0.1 MPa at contact rates (the Dahlquist criterion); dwell under roller pressure then drives viscous flow into micro-asperities — van der Waals adhesion plus mechanical interlocking. That is why every panel is roller-consolidated to a no-void standard, not hand-pressed.</span><span class="L zt">丁基以壓敏膠機制結合：初黏要求接觸速率下 G′ ≲ 0.1 MPa（Dahlquist 準則）；滾輪壓力下的停留驅動黏性流入微觀凹坑 —— 凡得瓦力加機械互鎖。所以每片板材都以滾輪壓實至無氣泡標準，不是用手按。</span><span class="L zs">丁基以压敏胶机制结合：初粘要求接触速率下 G′ ≲ 0.1 MPa（Dahlquist 准则）；滚轮压力下的停留驱动粘性流入微观凹坑 —— 范德华力加机械互锁。所以每片板材都以滚轮压实至无气泡标准，不是用手按。</span><span class="L it">Il butile aderisce come adesivo a pressione: il tack richiede G′ ≲ 0,1 MPa alle velocità di contatto (criterio di Dahlquist); la pressione del rullo spinge poi il flusso viscoso nelle micro-asperità — adesione di van der Waals più interlock meccanico. Per questo ogni pannello è consolidato a rullo fino a zero vuoti, mai premuto a mano.</span><span class="L ja">ブチルは感圧接着剤として結合します：タックには接触速度域で G′ ≲ 0.1 MPa が必要（Dahlquist 基準）。ローラー圧下の滞留が粘性流動を微細凹凸へ押し込み —— ファンデルワールス接着＋機械的噛み合いが完成します。だから全パネルをローラーで空隙ゼロ基準まで圧着します。手押しではありません。</span></p></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="sec-in">
+  <p class="sec-tag" style="color:var(--gold-2)"><span class="L en">03 · Materials Integrity</span><span class="L zt">03 · 材料真實性</span><span class="L zs">03 · 材料真实性</span><span class="L it">03 · Integrità dei Materiali</span><span class="L ja">03 · 材料の真正性</span></p>
+  <h2><span class="L en">Every batch is flame-tested. No exceptions.</span><span class="L zt">每一批材料都燃燒驗真。沒有例外。</span><span class="L zs">每一批材料都燃烧验真。没有例外。</span><span class="L it">Ogni lotto è testato alla fiamma. Nessuna eccezione.</span><span class="L ja">全ロットを燃焼試験。例外はありません。</span></h2>
+  <p class="intro"><span class="L en">The single biggest fraud in this market is asphalt sheet sold as “butyl.” The difference is not cosmetic: at 200 Hz on our reference build, genuine butyl delivers η<sub>c</sub> = 0.226; commodity asphalt delivers 0.068 — less than a third of the damping, plus heat sag and odour. Our QC protocol screens every incoming batch before it touches a vehicle:</span><span class="L zt">這個市場最大的騙局是「瀝青冒充丁基」。差異不是外觀：同一參考結構 200 Hz 下，真丁基 η<sub>c</sub> = 0.226，瀝青只有 0.068 —— 阻尼剩不到三分之一，還會熱軟化與產生氣味。每一批來料在上車之前完成以下篩檢：</span><span class="L zs">这个市场最大的骗局是「沥青冒充丁基」。差异不是外观：同一参考结构 200 Hz 下，真丁基 η<sub>c</sub> = 0.226，沥青只有 0.068 —— 阻尼剩不到三分之一，还会热软化与产生气味。每一批来料在上车之前完成以下筛检：</span><span class="L it">La più grande frode di questo mercato è il foglio bituminoso venduto come “butile”. La differenza non è estetica: a 200 Hz il vero butile rende η<sub>c</sub> = 0,226; il bitume 0,068 — meno di un terzo dello smorzamento, più cedimento termico e odore. Il nostro protocollo QC filtra ogni lotto in arrivo prima che tocchi un veicolo:</span><span class="L ja">この市場最大の欺瞞は「ブチル」と称して売られるアスファルトシートです。違いは見た目ではありません：基準構造・200 Hz で真正ブチルは η<sub>c</sub> = 0.226、市販アスファルトは 0.068 —— 減衰は 3 分の 1 未満、さらに熱垂れと臭気。当社の QC は入荷全ロットを車両に触れる前に選別します：</span></p>
+  <div class="grid3">
+   <div class="card"><h3><span class="L en">Flame test</span><span class="L zt">燃燒測試</span><span class="L zs">燃烧测试</span><span class="L it">Prova alla fiamma</span><span class="L ja">燃焼試験</span></h3><p style="font-size:14px"><span class="L en">True butyl resists ignition with no bituminous odour; asphalt softens immediately and smokes black. Samples retained per vehicle file.</span><span class="L zt">真丁基不易點燃、無瀝青臭；瀝青一烤即軟、冒黑煙。逐車留樣存檔。</span><span class="L zs">真丁基不易点燃、无沥青臭；沥青一烤即软、冒黑烟。逐车留样存档。</span><span class="L it">Il vero butile resiste all’accensione senza odore bituminoso; il bitume si ammorbidisce subito e fuma nero. Campioni conservati nel dossier di ogni veicolo.</span><span class="L ja">真正ブチルは着火しにくく瀝青臭なし。アスファルトは即座に軟化し黒煙。サンプルは車両ファイルごとに保管。</span></p></div>
+   <div class="card"><h3><span class="L en">Compliance check</span><span class="L zt">柔韌檢驗</span><span class="L zs">柔韧检验</span><span class="L it">Verifica di elasticità</span><span class="L ja">柔軟性検査</span></h3><p style="font-size:14px"><span class="L en">Knead-and-rebound verifies elastomeric compliance versus brittle or greasy bituminous fillers.</span><span class="L zt">捏揉回彈驗證彈性體特性，排除硬脆或油膩的瀝青填料。</span><span class="L zs">捏揉回弹验证弹性体特性，排除硬脆或油腻的沥青填料。</span><span class="L it">La prova di impasto e ritorno verifica la natura elastomerica contro cariche bituminose fragili o untuose.</span><span class="L ja">捏り・反発試験でエラストマー特性を確認し、脆いまたは油性の瀝青系充填材を排除。</span></p></div>
+   <div class="card"><h3><span class="L en">Immersion check</span><span class="L zt">吸水檢驗</span><span class="L zs">吸水检验</span><span class="L it">Prova di immersione</span><span class="L ja">浸水検査</span></h3><p style="font-size:14px"><span class="L en">Closed-cell moisture-barrier foam is 24-hour immersion-tested — zero water uptake before it enters a wet zone.</span><span class="L zt">濕區閉孔棉 24 小時浸水零吸水才放行。</span><span class="L zs">湿区闭孔棉 24 小时浸水零吸水才放行。</span><span class="L it">La schiuma a celle chiuse è testata in immersione per 24 ore — zero assorbimento prima di entrare in zona umida.</span><span class="L ja">湿潤域用の独立気泡フォームは 24 時間浸水試験 —— 吸水ゼロで初めて合格。</span></p></div>
+  </div>
+ </div>
+</section>
+
+<section id="service">
+ <div class="sec-in">
+  <p class="sec-tag"><span class="L en">04 · The Service</span><span class="L zt">04 · 服務內容</span><span class="L zs">04 · 服务内容</span><span class="L it">04 · Il Servizio</span><span class="L ja">04 · サービス</span></p>
+  <h2><span class="L en">One engineered package. One point of responsibility.</span><span class="L zt">一個完整工程方案，單一責任窗口。</span><span class="L zs">一个完整工程方案，单一责任窗口。</span><span class="L it">Un pacchetto ingegnerizzato. Un unico responsabile.</span><span class="L ja">ひとつの工学パッケージ、ひとつの責任窓口。</span></h2>
+  <p class="intro"><span class="L en">Henderson Transpacific delivers the complete engineered outcome — design calculation, verified materials, controlled installation at our Zhuhai partner facility, mechanism care, and measured acceptance — under one responsibility.</span><span class="L zt">Henderson Transpacific 交付的是完整工程結果 —— 設計計算、驗證材料、珠海合作工場受控施工、機構檢整、量測驗收 —— 單一責任窗口。</span><span class="L zs">Henderson Transpacific 交付的是完整工程结果 —— 设计计算、验证材料、珠海合作工场受控施工、机构检整、测量验收 —— 单一责任窗口。</span><span class="L it">Henderson Transpacific consegna il risultato ingegnerizzato completo — calcolo di progetto, materiali verificati, installazione controllata presso la struttura partner di Zhuhai, cura dei meccanismi e collaudo misurato — sotto un’unica responsabilità.</span><span class="L ja">設計計算・検証済み材料・珠海パートナー工場での管理施工・機構整備・実測検収 —— そのすべてを単一責任で提供します。</span></p>
+  <div class="grid2">
+   <div class="pkg feat">
+    <div class="pkg-h"><span class="badge"><span class="L en">Core Programme</span><span class="L zt">核心方案</span><span class="L zs">核心方案</span><span class="L it">Programma Base</span><span class="L ja">コアプログラム</span></span>
+     <div class="nm"><span class="L en">Stage I — Acoustic Foundation</span><span class="L zt">第一階段 —— 聲學基礎工程</span><span class="L zs">第一阶段 —— 声学基础工程</span><span class="L it">Fase I — Fondazione Acustica</span><span class="L ja">ステージ I —— 音響基盤工事</span></div>
+     <div class="for"><span class="L en">Any make &amp; model · 4 doors + wheel arches + seal upgrade</span><span class="L zt">任何品牌車型 · 四門 + 輪拱 + 門封升級</span><span class="L zs">任何品牌车型 · 四门 + 轮拱 + 门封升级</span><span class="L it">Qualsiasi marca e modello · 4 porte + passaruota + guarnizioni</span><span class="L ja">全メーカー・全車種対応 · ドア4枚＋ホイールアーチ＋シール強化</span></div></div>
+    <div class="pkg-b"><ul class="check">
+     <li><span class="L en">RKU-designed CLD treatment, antinode-mapped, roller-consolidated</span><span class="L zt">RKU 設計約束阻尼、反節點定位、滾輪壓實</span><span class="L zs">RKU 设计约束阻尼、反节点定位、滚轮压实</span><span class="L it">Trattamento CLD progettato RKU, mappato sugli antinodi, consolidato a rullo</span><span class="L ja">RKU 設計の CLD 施工、アンチノード配置、ローラー圧着</span></li>
+     <li><span class="L en">Door “loudspeaker enclosure” conversion — apertures acoustically sealed, drainage fully preserved</span><span class="L zt">車門音箱化 —— 檢修孔聲學密封、排水完整保留</span><span class="L zs">车门音箱化 —— 检修孔声学密封、排水完整保留</span><span class="L it">Conversione della porta in “cassa acustica” — aperture sigillate, drenaggi integralmente preservati</span><span class="L ja">ドアの「スピーカーエンクロージャー」化 —— 開口部を音響密封、排水は完全保持</span></li>
+     <li><span class="L en">Wet/dry zone engineering: closed-cell barrier ≥50 mm above drain line</span><span class="L zt">濕乾區邊界工程：閉孔棉距排水線 ≥50 mm</span><span class="L zs">湿干区边界工程：闭孔棉距排水线 ≥50 mm</span><span class="L it">Ingegneria zone umido/asciutto: barriera a celle chiuse ≥50 mm sopra la linea di drenaggio</span><span class="L ja">湿潤/乾燥域設計：独立気泡バリアは排水線から 50 mm 以上</span></li>
+     <li><span class="L en">Mechanism attention while panels are open — hinges, check-straps, seals at zero marginal labour</span><span class="L zt">拆裝同場機構檢整 —— 鉸鏈、限位器、膠條零邊際工時</span><span class="L zs">拆装同场机构检整 —— 铰链、限位器、胶条零边际工时</span><span class="L it">Cura dei meccanismi a pannelli aperti — cerniere, tiranti e guarnizioni a costo marginale zero</span><span class="L ja">パネル開放時に機構も整備 —— ヒンジ・チェックストラップ・シールを追加工数ゼロで点検</span></li>
+     <li><b><span class="L en">Tesla Model S owners:</span><span class="L zt">Tesla Model S 車主：</span><span class="L zs">Tesla Model S 车主：</span><span class="L it">Proprietari Tesla Model S:</span><span class="L ja">テスラ Model S オーナー：</span></b> <span class="L en">Gen 2.0 door-handle refurbishment included — SUS304 CNC gears + silicone microswitch harnesses, ×10 cycle-tested</span><span class="L zt">含 Gen 2.0 門把手機構重構 —— SUS304 CNC 齒輪 + 矽膠微動線束，×10 循環測試</span><span class="L zs">含 Gen 2.0 门把手机构重构 —— SUS304 CNC 齿轮 + 硅胶微动线束，×10 循环测试</span><span class="L it">revisione maniglie Gen 2.0 inclusa — ingranaggi CNC SUS304 + cablaggi microswitch in silicone, testati ×10 cicli</span><span class="L ja">Gen 2.0 ドアハンドル機構刷新込み —— SUS304 CNC ギア＋シリコーン被覆マイクロスイッチハーネス、×10 サイクル試験</span></li>
+     <li><span class="L en">Dual-seal upgrade: full supplementary door sealing kit</span><span class="L zt">門封升級：全車輔助膠條套件</span><span class="L zs">门封升级：全车辅助胶条套件</span><span class="L it">Upgrade doppia guarnizione: kit supplementare completo</span><span class="L ja">デュアルシール強化：全車補助シールキット</span></li>
+     <li><span class="L en">Before/after acoustic measurement report</span><span class="L zt">前後量測報告</span><span class="L zs">前后测量报告</span><span class="L it">Report di misura prima/dopo</span><span class="L ja">施工前後の音響測定レポート</span></li>
+    </ul></div>
+    <div class="pkg-p"><div class="price"><span class="L en">Zhuhai installed price</span><span class="L zt">珠海安裝價</span><span class="L zs">珠海安装价</span><span class="L it">Prezzo installato a Zhuhai</span><span class="L ja">珠海施工価格</span> · <span class="ph">¥ —,———</span></div>
+     <div class="price-note"><span class="L en">All-inclusive engineered service. Balance payable on measured acceptance (§05).</span><span class="L zt">一口價全包；尾款於量測驗收合格後支付（§05）。</span><span class="L zs">一口价全包；尾款于测量验收合格后支付（§05）。</span><span class="L it">Servizio ingegnerizzato tutto incluso. Saldo al collaudo misurato (§05).</span><span class="L ja">オールインクルーシブ。残金は実測検収合格後のお支払い（§05）。</span></div></div>
+   </div>
+   <div class="pkg">
+    <div class="pkg-h"><span class="badge" style="background:var(--ivory-2);color:var(--ink-3)"><span class="L en">Extension</span><span class="L zt">延伸方案</span><span class="L zs">延伸方案</span><span class="L it">Estensione</span><span class="L ja">拡張</span></span>
+     <div class="nm"><span class="L en">Stage II — Cabin Floor &amp; Trunk</span><span class="L zt">第二階段 —— 車廂地板與尾廂</span><span class="L zs">第二阶段 —— 车厢地板与尾厢</span><span class="L it">Fase II — Pavimento e Bagagliaio</span><span class="L ja">ステージ II —— フロア＆トランク</span></div>
+     <div class="for"><span class="L en">Data-driven extension — recommended only if Stage I measurement indicates residual low-frequency path</span><span class="L zt">依第一階段量測數據決定，絕不過度施工</span><span class="L zs">依第一阶段测量数据决定，绝不过度施工</span><span class="L it">Estensione guidata dai dati — consigliata solo se le misure della Fase I indicano un percorso residuo a bassa frequenza</span><span class="L ja">データ駆動の拡張 —— ステージ I の測定で低周波経路が残る場合のみ推奨</span></div></div>
+    <div class="pkg-b"><ul class="check">
+     <li><span class="L en">Cabin floor CLD + acoustic absorption build-up</span><span class="L zt">車廂地板阻尼與吸音</span><span class="L zs">车厢地板阻尼与吸音</span><span class="L it">CLD pavimento + assorbimento acustico</span><span class="L ja">フロア CLD＋吸音構築</span></li>
+     <li><span class="L en">Trunk and rear-arch treatment</span><span class="L zt">尾廂與後輪拱</span><span class="L zs">尾厢与后轮拱</span><span class="L it">Trattamento bagagliaio e passaruota posteriori</span><span class="L ja">トランク＆リアアーチ処理</span></li>
+     <li><span class="L en">Follow-up third-octave measurement</span><span class="L zt">追蹤頻譜量測</span><span class="L zs">追踪频谱测量</span><span class="L it">Misura di follow-up in terzi d’ottava</span><span class="L ja">フォローアップ 1/3 オクターブ測定</span></li>
+    </ul>
+    <p style="font-size:13px;color:var(--ink-3)"><span class="L en">We will tell you <b>not</b> to buy this if Stage I data says you don’t need it. That is what engineering-led service means.</span><span class="L zt">如果數據顯示不需要，我們會直接告訴你不用做 —— 這就是工程導向服務。</span><span class="L zs">如果数据显示不需要，我们会直接告诉你不用做 —— 这就是工程导向服务。</span><span class="L it">Se i dati della Fase I dicono che non ti serve, ti diremo di <b>non</b> comprarla. Questo significa servizio guidato dall’ingegneria.</span><span class="L ja">ステージ I のデータが不要と示せば、「買わないでください」と申し上げます。それがエンジニアリング主導のサービスです。</span></p></div>
+    <div class="pkg-p"><div class="price"><span class="L en">Zhuhai installed price</span><span class="L zt">珠海安裝價</span><span class="L zs">珠海安装价</span><span class="L it">Prezzo installato a Zhuhai</span><span class="L ja">珠海施工価格</span> · <span class="ph">¥ —,———</span></div>
+     <div class="price-note"><span class="L en">Quoted after Stage I acceptance data review.</span><span class="L zt">於第一階段驗收數據審閱後報價。</span><span class="L zs">于第一阶段验收数据审阅后报价。</span><span class="L it">Quotato dopo la revisione dei dati di collaudo della Fase I.</span><span class="L ja">ステージ I 検収データの確認後にお見積り。</span></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="acceptance">
+ <div class="sec-in">
+  <p class="sec-tag"><span class="L en">05 · Measured Acceptance</span><span class="L zt">05 · 量測驗收</span><span class="L zs">05 · 测量验收</span><span class="L it">05 · Collaudo Misurato</span><span class="L ja">05 · 実測検収</span></p>
+  <h2><span class="L en">You don't pay the balance until the numbers pass.</span><span class="L zt">數據不合格，尾款不用付。</span><span class="L zs">数据不合格，尾款不用付。</span><span class="L it">Il saldo si paga solo quando i numeri passano.</span><span class="L ja">数値が合格するまで、残金は不要です。</span></h2>
+  <p class="intro"><span class="L en">Every programme is bracketed by an identical-conditions measurement protocol — same road section, same speeds, same tyre pressures, same instrument position. The acceptance thresholds are written into the service agreement.</span><span class="L zt">每個專案都以「同條件前後量測」收尾 —— 同路段、同車速、同胎壓、同儀器位置。驗收門檻寫進服務合約。</span><span class="L zs">每个项目都以「同条件前后测量」收尾 —— 同路段、同车速、同胎压、同仪器位置。验收门槛写进服务合约。</span><span class="L it">Ogni programma è delimitato da un protocollo di misura a condizioni identiche — stesso tratto di strada, stesse velocità, stesse pressioni gomme, stessa posizione dello strumento. Le soglie di collaudo sono scritte nel contratto.</span><span class="L ja">すべてのプログラムは同一条件での前後測定で締めくくります —— 同じ路面、同じ速度、同じタイヤ空気圧、同じ計器位置。検収基準値はサービス契約に明記されます。</span></p>
+  <table>
+   <thead><tr><th><span class="L en">Metric</span><span class="L zt">指標</span><span class="L zs">指标</span><span class="L it">Metrica</span><span class="L ja">指標</span></th><th><span class="L en">Protocol</span><span class="L zt">方法</span><span class="L zs">方法</span><span class="L it">Protocollo</span><span class="L ja">方法</span></th><th class="num"><span class="L en">Acceptance</span><span class="L zt">合格門檻</span><span class="L zs">合格门槛</span><span class="L it">Soglia</span><span class="L ja">合格基準</span></th></tr></thead>
+   <tbody>
+    <tr><td><span class="L en">Cruise interior noise</span><span class="L zt">巡航噪音</span><span class="L zs">巡航噪音</span><span class="L it">Rumore di crociera</span><span class="L ja">巡航騒音</span></td><td><span class="L en">80 &amp; 100 km/h constant-speed, calibrated SPL, 30 s × 3 median</span><span class="L zt">80 與 100 km/h 定速、校準 SPL、30 秒 ×3 取中位數</span><span class="L zs">80 与 100 km/h 定速、校准 SPL、30 秒 ×3 取中位数</span><span class="L it">80 e 100 km/h a velocità costante, SPL calibrato, mediana 30 s × 3</span><span class="L ja">80・100 km/h 定速、校正 SPL、30 秒×3 の中央値</span></td><td class="num"><span class="L en">≥ 1.5 dB(A) reduction @ 80 km/h</span><span class="L zt">80 km/h 降低 ≥ 1.5 dB(A)</span><span class="L zs">80 km/h 降低 ≥ 1.5 dB(A)</span><span class="L it">riduzione ≥ 1,5 dB(A) @ 80 km/h</span><span class="L ja">80 km/h で ≥ 1.5 dB(A) 低減</span></td></tr>
+    <tr><td><span class="L en">Damping band</span><span class="L zt">阻尼頻帶</span><span class="L zs">阻尼频带</span><span class="L it">Banda di smorzamento</span><span class="L ja">減衰帯域</span></td><td><span class="L en">1/3-octave spectrum, 63 Hz – 4 kHz</span><span class="L zt">1/3 倍頻程頻譜 63 Hz – 4 kHz</span><span class="L zs">1/3 倍频程频谱 63 Hz – 4 kHz</span><span class="L it">Spettro in terzi d’ottava, 63 Hz – 4 kHz</span><span class="L ja">1/3 オクターブスペクトル 63 Hz–4 kHz</span></td><td class="num"><span class="L en">≥ 3 dB reduction · 100–315 Hz</span><span class="L zt">100–315 Hz 降低 ≥ 3 dB</span><span class="L zs">100–315 Hz 降低 ≥ 3 dB</span><span class="L it">riduzione ≥ 3 dB · 100–315 Hz</span><span class="L ja">100–315 Hz で ≥ 3 dB 低減</span></td></tr>
+    <tr><td><span class="L en">Door-close signature</span><span class="L zt">關門聲</span><span class="L zs">关门声</span><span class="L it">Firma di chiusura porta</span><span class="L ja">ドア閉鎖音</span></td><td><span class="L en">1 m recording, decay envelope analysis</span><span class="L zt">1 m 錄音、衰減包絡分析</span><span class="L zs">1 m 录音、衰减包络分析</span><span class="L it">Registrazione a 1 m, analisi dell’inviluppo di decadimento</span><span class="L ja">1 m 録音、減衰包絡線解析</span></td><td class="num"><span class="L en">No metallic ring-out</span><span class="L zt">無金屬殘響</span><span class="L zs">无金属残响</span><span class="L it">Nessuna coda metallica</span><span class="L ja">金属残響なし</span></td></tr>
+    <tr><td><span class="L en">Mechanism</span><span class="L zt">機構</span><span class="L zs">机构</span><span class="L it">Meccanismi</span><span class="L ja">機構</span></td><td><span class="L en">Handle / window cycling, full travel verification</span><span class="L zt">把手與車窗循環、全行程驗證</span><span class="L zs">把手与车窗循环、全行程验证</span><span class="L it">Ciclaggio maniglie/finestrini, verifica corsa completa</span><span class="L ja">ハンドル・ウィンドウのサイクル試験、全ストローク確認</span></td><td class="num"><span class="L en">×10 cycles, zero faults</span><span class="L zt">×10 循環零失敗</span><span class="L zs">×10 循环零失败</span><span class="L it">×10 cicli, zero guasti</span><span class="L ja">×10 サイクル無故障</span></td></tr>
+    <tr><td><span class="L en">Integrity</span><span class="L zt">完整性</span><span class="L zs">完整性</span><span class="L it">Integrità</span><span class="L ja">完全性</span></td><td><span class="L en">Drain-path probe test, per-door photo dossier</span><span class="L zt">排水通針測試、逐門照片檔案</span><span class="L zs">排水通针测试、逐门照片档案</span><span class="L it">Prova sonda drenaggi, dossier fotografico per porta</span><span class="L ja">排水経路プローブ試験、ドアごとの写真記録</span></td><td class="num"><span class="L en">All drains clear · dossier delivered</span><span class="L zt">排水全通 · 存證交付</span><span class="L zs">排水全通 · 存证交付</span><span class="L it">Drenaggi liberi · dossier consegnato</span><span class="L ja">全排水良好 · 記録一式納品</span></td></tr>
+   </tbody>
+  </table>
+ </div>
+</section>
+
+<section id="safety">
+ <div class="sec-in">
+  <p class="sec-tag"><span class="L en">06 · Safety Engineering</span><span class="L zt">06 · 安全工程</span><span class="L zs">06 · 安全工程</span><span class="L it">06 · Ingegneria della Sicurezza</span><span class="L ja">06 · 安全エンジニアリング</span></p>
+  <h2><span class="L en">The lines we will not cross — on any car, at any price.</span><span class="L zt">我們不會越過的紅線 —— 任何車、任何價格都一樣。</span><span class="L zs">我们不会越过的红线 —— 任何车、任何价格都一样。</span><span class="L it">Le linee che non superiamo — su nessuna auto, a nessun prezzo.</span><span class="L ja">どんな車でも、いくら積まれても越えない一線。</span></h2>
+  <div class="redline"><div class="t"><span class="L en">Airbag sensor exclusion zones</span><span class="L zt">氣囊感測器禁貼區</span><span class="L zs">气囊传感器禁贴区</span><span class="L it">Zone di esclusione sensori airbag</span><span class="L ja">エアバッグセンサー禁止区域</span></div>
+   <p style="font-size:14px;margin:0"><span class="L en">Modern vehicles carry side-impact sensing in doors and pillars (Tesla Model S: front doors and B-pillars). Damping mass alters a panel’s transfer function — the very signal a crash sensor reads. Our installation standard prohibits any material on sensor bodies, brackets, or bracket-carrying panel zones, with per-door photographic evidence in your vehicle dossier. Any facility unwilling to work to this standard does not install for us.</span><span class="L zt">現代車輛的門與柱內設有側撞感測（Tesla Model S：前門與 B 柱）。阻尼質量會改變鈑金傳遞函數 —— 那正是撞擊感測器判讀的訊號。施工標準禁止在感測器本體、托架及其鈑金區貼任何材料，逐門拍照存證隨車交付。不接受此標準的工場，我們不合作。</span><span class="L zs">现代车辆的门与柱内设有侧撞感测（Tesla Model S：前门与 B 柱）。阻尼质量会改变钣金传递函数 —— 那正是撞击传感器判读的信号。施工标准禁止在传感器本体、托架及其钣金区贴任何材料，逐门拍照存证随车交付。不接受此标准的工场，我们不合作。</span><span class="L it">I veicoli moderni montano sensori di impatto laterale in porte e montanti (Tesla Model S: porte anteriori e montanti B). La massa smorzante altera la funzione di trasferimento del pannello — proprio il segnale che il sensore legge. Il nostro standard vieta qualsiasi materiale su sensori, staffe e relative zone del pannello, con evidenza fotografica per porta nel dossier del veicolo. Chi non lavora a questo standard non installa per noi.</span><span class="L ja">現代の車はドアやピラーに側面衝突センサーを備えます（テスラ Model S：フロントドアと B ピラー）。制振質量はパネルの伝達関数を変えます —— それこそ衝突センサーが読む信号です。当社基準ではセンサー本体・ブラケット・その取付パネル面への施工を禁止し、ドアごとの写真証拠を車両記録として納品。この基準を守れない工場とは提携しません。</span></p></div>
+  <div class="grid3">
+   <div class="card"><h3><span class="L en">Frameless-glass discipline</span><span class="L zt">無框玻璃紀律</span><span class="L zs">无框玻璃纪律</span><span class="L it">Disciplina vetri senza cornice</span><span class="L ja">フレームレスガラスの規律</span></h3><p style="font-size:14px"><span class="L en">No material intrudes into glass travel, run channels, or beltline seals; auto-drop verified on reassembly.</span><span class="L zt">材料零侵入玻璃行程、導槽與腰線膠條；復位後逐門驗證自動落窗。</span><span class="L zs">材料零侵入玻璃行程、导槽与腰线胶条；复位后逐门验证自动落窗。</span><span class="L it">Nessun materiale invade la corsa del vetro, i canali o le guarnizioni; auto-drop verificato al rimontaggio.</span><span class="L ja">ガラスの軌道・ランチャンネル・ベルトラインシールへの材料侵入ゼロ。組付後にオートドロップを全ドア確認。</span></p></div>
+   <div class="card"><h3><span class="L en">Drainage is sacred</span><span class="L zt">排水神聖不可侵犯</span><span class="L zs">排水神圣不可侵犯</span><span class="L it">Il drenaggio è sacro</span><span class="L ja">排水は聖域</span></h3><p style="font-size:14px"><span class="L en">We seal acoustic paths, never water paths. Factory vapor barriers reinstated; every drain probed clear.</span><span class="L zt">密封聲學路徑，絕不密封排水路徑。原廠防水膜復位、排水孔逐一通針。</span><span class="L zs">密封声学路径，绝不密封排水路径。原厂防水膜复位、排水孔逐一通针。</span><span class="L it">Sigilliamo i percorsi acustici, mai quelli dell’acqua. Barriere vapore ripristinate; ogni drenaggio sondato.</span><span class="L ja">密封するのは音の経路のみ。水の経路は決して塞ぎません。純正防水膜を復元し、全排水孔を貫通確認。</span></p></div>
+   <div class="card"><h3><span class="L en">Corrosion-aware materials</span><span class="L zt">電偶腐蝕防護</span><span class="L zs">电偶腐蚀防护</span><span class="L it">Materiali anti-corrosione</span><span class="L ja">ガルバニック腐食対策</span></h3><p style="font-size:14px"><span class="L en">Galvanic pairing engineered per body material: foil systems on aluminium, isolation or foil-free damping on bare-steel zones. No dissimilar-metal cells, ever.</span><span class="L zt">依車體材質做電偶配對：鋁件用箔系統、裸鋼區改隔離或無箔阻尼片，杜絕電偶腐蝕。</span><span class="L zs">依车体材质做电偶配对：铝件用箔系统、裸钢区改隔离或无箔阻尼片，杜绝电偶腐蚀。</span><span class="L it">Accoppiamento galvanico progettato per materiale: sistemi a lamina su alluminio, isolamento o smorzamento senza lamina sull’acciaio nudo. Mai celle galvaniche.</span><span class="L ja">車体材質ごとにガルバニック設計：アルミには箔システム、裸鋼部は絶縁または箔レス制振材。異種金属セルは決して作りません。</span></p></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="contact">
+ <div class="sec-in">
+  <p class="sec-tag" style="color:var(--gold-2)"><span class="L en">07 · Enquire</span><span class="L zt">07 · 詢價</span><span class="L zs">07 · 询价</span><span class="L it">07 · Contatti</span><span class="L ja">07 · お問い合わせ</span></p>
+  <h2><span class="L en">Tell us about your car.</span><span class="L zt">跟我們聊聊你的車。</span><span class="L zs">跟我们聊聊你的车。</span><span class="L it">Parlaci della tua auto.</span><span class="L ja">あなたの車のこと、聞かせてください。</span></h2>
+  <div class="contact-grid">
+   <div>
+    <p class="intro"><span class="L en">Consultations begin with your make, model and a description of what you hear. We respond with a scoped engineering proposal computed for your vehicle — not a generic menu.</span><span class="L zt">諮詢從你的車型與「你聽到什麼」開始。我們回覆的是為你這台車計算的工程方案，不是通用菜單。</span><span class="L zs">咨询从你的车型与「你听到什么」开始。我们回复的是为你这台车计算的工程方案，不是通用菜单。</span><span class="L it">La consulenza parte da marca, modello e da ciò che senti. Rispondiamo con una proposta ingegneristica calcolata per il tuo veicolo — non un menù generico.</span><span class="L ja">ご相談は車種と「何が聞こえるか」から始まります。返答は汎用メニューではなく、お客様の車のために計算した提案書です。</span></p>
+    <div class="ph-note"><b>[Placeholder]</b> <span class="L en">Contact channels to be inserted before launch: enquiry email · WeChat · WhatsApp · Zhuhai facility address.</span><span class="L zt">上線前填入：聯絡信箱／微信／WhatsApp／珠海工場地址。</span><span class="L zs">上线前填入：联系邮箱／微信／WhatsApp／珠海工场地址。</span><span class="L it">Canali di contatto da inserire prima del lancio: email · WeChat · WhatsApp · indirizzo struttura Zhuhai.</span><span class="L ja">公開前に記入：メール／WeChat／WhatsApp／珠海工場住所。</span></div>
+   </div>
+   <div>
+    <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓';">
+     <div class="field"><label><span class="L en">Name</span><span class="L zt">姓名</span><span class="L zs">姓名</span><span class="L it">Nome</span><span class="L ja">お名前</span></label><input type="text" required></div>
+     <div class="field"><label><span class="L en">Vehicle &amp; year</span><span class="L zt">車型年份</span><span class="L zs">车型年份</span><span class="L it">Veicolo e anno</span><span class="L ja">車種・年式</span></label><input type="text" placeholder="e.g. Model S 2015 · BMW 530i · Alphard"></div>
+     <div class="field"><label><span class="L en">Contact</span><span class="L zt">聯絡方式</span><span class="L zs">联系方式</span><span class="L it">Contatto</span><span class="L ja">ご連絡先</span></label><input type="text" placeholder="Email / WeChat / WhatsApp"></div>
+     <div class="field"><label><span class="L en">What do you hear?</span><span class="L zt">你聽到什麼？</span><span class="L zs">你听到什么？</span><span class="L it">Cosa senti?</span><span class="L ja">どんな音が聞こえますか？</span></label><textarea id="hear-field" placeholder="e.g. door rattle at low speed, road boom on highway"></textarea></div>
+     <button class="cta" type="submit" style="border:0;cursor:pointer;width:100%"><span class="L en">Request engineering proposal</span><span class="L zt">索取工程方案</span><span class="L zs">索取工程方案</span><span class="L it">Richiedi proposta ingegneristica</span><span class="L ja">エンジニアリング提案を依頼</span></button>
+    </form>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="foot-in">
+  <p><b>Henderson Transpacific LLC — Materials Science Department.</b> <span class="L en">Acoustic systems designed in USA; installation performed by our audited partner facility in Zhuhai, Greater Bay Area. Henderson Transpacific is an independent engineering-service provider and is not affiliated with, endorsed by, or sponsored by any vehicle manufacturer. All vehicle names and marks are trademarks of their respective manufacturers, used for compatibility identification only.</span><span class="L zt">聲學系統於美國設計；安裝由大灣區珠海之受稽核合作工場執行。Henderson Transpacific 為獨立工程服務商，與任何車廠均無隸屬、背書或贊助關係。所有車名與商標屬各原廠所有，僅作相容性識別。</span><span class="L zs">声学系统于美国设计；安装由大湾区珠海之受稽核合作工场执行。Henderson Transpacific 为独立工程服务商，与任何车厂均无隶属、背书或赞助关系。所有车名与商标属各原厂所有，仅作兼容性识别。</span><span class="L it">Sistemi acustici progettati negli USA; installazione presso la struttura partner di Zhuhai (Greater Bay Area) sottoposta ad audit. Henderson Transpacific è un fornitore di servizi di ingegneria indipendente, non affiliato ad alcun costruttore. Tutti i marchi appartengono ai rispettivi proprietari e sono usati solo per identificare la compatibilità.</span><span class="L ja">音響システムは米国で設計、施工はグレーターベイエリア珠海の監査済みパートナー工場が実施。Henderson Transpacific は独立系エンジニアリング企業であり、いかなる自動車メーカーとも提携・承認・後援関係にありません。車名・商標は各社に帰属し、適合識別のためにのみ使用しています。</span></p>
+  <p><span class="L en">Performance figures on this page are model-derived design values (Ross–Kerwin–Ungar composite analysis) and contracted acceptance minima measured per vehicle; individual results are documented in each vehicle’s acceptance report. Airbag-sensor exclusion practice is a conservative engineering standard adopted by Henderson Transpacific.</span><span class="L zt">本頁工程數值為模型推導之設計值（RKU 複合分析）與逐車量測之合約驗收下限；個別結果記錄於各車驗收報告。氣囊感測器禁貼作法為本公司採行之保守工程標準。</span><span class="L zs">本页工程数值为模型推导之设计值（RKU 复合分析）与逐车测量之合约验收下限；个别结果记录于各车验收报告。气囊传感器禁贴做法为本公司采行之保守工程标准。</span><span class="L it">I valori in questa pagina sono valori di progetto derivati dal modello (analisi composita RKU) e minimi di collaudo contrattuali misurati per veicolo; i risultati individuali sono documentati nel report di collaudo. L’esclusione dei sensori airbag è uno standard ingegneristico conservativo adottato da Henderson Transpacific.</span><span class="L ja">本ページの数値は RKU 複合解析によるモデル設計値および車両ごとに実測される契約検収下限値です。個別結果は各車の検収レポートに記録されます。エアバッグセンサー除外は当社が採用する保守的な工学基準です。</span></p>
+  <p>© 2026 Henderson Transpacific LLC. All rights reserved.</p>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var bar=document.getElementById('langbar');
+ var htmlLang={en:'en',zt:'zh-Hant',zs:'zh-Hans',it:'it',ja:'ja'};
+ bar.addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b)return;
+  document.body.setAttribute('data-lang',b.dataset.l);
+  document.documentElement.setAttribute('lang',htmlLang[b.dataset.l]);
+  bar.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});
+  var PH={en:'e.g. door rattle at low speed, road boom on highway',zt:'例：低速門板異音、高速路噪轟鳴',zs:'例：低速门板异音、高速路噪轰鸣',it:'es. vibrazione portiera a bassa velocità, rombo in autostrada',ja:'例：低速でのドアのビビリ音、高速道路のこもり音'};
+  var f=document.getElementById('hear-field'); if(f) f.placeholder=PH[b.dataset.l];
+ });
+})();
+</script>
+</body>
+</html>
