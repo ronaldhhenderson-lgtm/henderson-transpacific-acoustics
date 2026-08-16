@@ -137,6 +137,31 @@ figcaption b{color:var(--ink-2)}
 footer{background:#0b1220;color:#7b8494;padding:40px 28px;font-size:12px;line-height:1.8}
 .foot-in{max-width:1080px;margin:0 auto}
 footer b{color:#c8cdd5}
+/* ---- v6 interactive ---- */
+#scrollbar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-2),var(--gold));width:0;z-index:99}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
+.card,.pkg{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover,.pkg:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(15,17,19,.10);border-color:var(--gold-2)}
+.ipanel{margin-top:26px}
+.icard .crow{margin:14px 0}
+.icard label{display:flex;justify-content:space-between;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);font-weight:650;margin-bottom:6px;gap:10px}
+.icard label b{color:var(--gold);font-family:var(--mono);text-transform:none;letter-spacing:0}
+.icard input[type=range]{width:100%;accent-color:var(--gold)}
+.mbtn{background:var(--ivory-2);border:1px solid var(--rule-2);color:var(--ink-2);font-weight:650;font-size:13px;padding:7px 16px;cursor:pointer;font-family:inherit}
+.mbtn:first-of-type{border-radius:6px 0 0 6px}.mbtn:last-of-type{border-radius:0 6px 6px 0;margin-left:-1px}
+.mbtn.on{background:var(--gold);border-color:var(--gold);color:#fff}
+.cout{background:var(--navy);border-radius:8px;padding:14px 16px;margin-top:16px;color:var(--ivory);font-family:var(--mono);font-size:13px}
+.cout .big{font-size:24px;color:var(--gold-2);font-weight:700}
+.meterwrap{height:6px;background:rgba(255,255,255,.14);border-radius:3px;margin:10px 0 8px;overflow:hidden}
+#calc-meter{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:3px;transition:width .2s}
+.t60s{font-size:12px;color:#b6bcc6}.t60s b{color:#fff}
+.abtn{background:var(--navy);color:var(--ivory);border:1px solid var(--navy-3);font-weight:650;font-size:14px;padding:12px 22px;border-radius:6px;cursor:pointer;font-family:inherit;margin:4px 10px 4px 0;transition:all .2s}
+.abtn:hover{border-color:var(--gold-2);color:var(--gold-2);transform:translateY(-2px)}
+.abtn.hot{background:var(--gold);border-color:var(--gold);color:#fff}
+.abtn.hot:hover{color:#fff;filter:brightness(1.08)}
+.fine{font-size:11.5px;color:var(--ink-3);margin-top:12px}
 
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:.85}
 .hero-in{position:relative;z-index:2}
@@ -267,6 +292,8 @@ body[data-lang="zs"]{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pi
 </svg>
   <figcaption><b><span class="L en">Fig. 1 — Composite loss factor vs frequency, computed for our aluminium-door reference build (RKU model). Your vehicle receives its own curve.</span><span class="L zt">圖 1 —— 鋁門參考結構之複合損失係數頻率響應（RKU 模型）；你的車會有專屬計算曲線。</span><span class="L zs">图 1 —— 铝门参考结构之复合损失系数频率响应（RKU 模型）；你的车会有专属计算曲线。</span><span class="L it">Fig. 1 — Fattore di perdita composito vs frequenza, calcolato per la configurazione di riferimento (modello RKU). Il tuo veicolo riceve la propria curva.</span><span class="L ja">図 1 —— アルミドア基準構造の複合損失係数の周波数応答（RKUモデル）。お客様の車には専用の計算曲線が作成されます。</span></b> <span class="L en">Deliberately optimized for the 80–300 Hz door-slam and boom band. Green dashed: the commodity asphalt sheet much of the market installs under a “butyl” label — under one third of the damping.</span><span class="L zt">設計刻意最佳化於 80–300 Hz 關門聲與轟鳴頻段；綠虛線為市場上以「丁基」名義出售的瀝青板 —— 阻尼不到三分之一。</span><span class="L zs">设计刻意最优化于 80–300 Hz 关门声与轰鸣频段；绿虚线为市场上以「丁基」名义出售的沥青板 —— 阻尼不到三分之一。</span><span class="L it">Ottimizzato deliberatamente per la banda 80–300 Hz. Linea verde tratteggiata: il foglio bituminoso venduto come “butile” da gran parte del mercato — meno di un terzo dello smorzamento.</span><span class="L ja">80–300 Hz のドア閉鎖音・こもり音帯域に意図的に最適化。緑の破線は市場で「ブチル」として売られるアスファルトシート —— 減衰は 3 分の 1 未満。</span></figcaption>
   </figure>
+<div class="ipanel grid2">
+<div class="card icard"><div class="step"><span class="L en">Interactive · live model</span><span class="L zt">互動 · 模型即時計算</span><span class="L zs">互动 · 模型即时计算</span><span class="L it">Interattivo · modello live</span><span class="L ja">インタラクティブ · ライブ計算</span></div><h3><span class="L en">Compute your own panel</span><span class="L zt">試算你自己的鈑金</span><span class="L zs">试算你自己的钣金</span><span class="L it">Calcola il tuo pannello</span><span class="L ja">あなたのパネルを計算</span></h3><div class="crow"><label><span class="L en">Panel material</span><span class="L zt">鈑金材質</span><span class="L zs">钣金材质</span><span class="L it">Materiale del pannello</span><span class="L ja">パネル材質</span></label><div><button type="button" class="mbtn on" data-m="al"><span class="L en">Aluminium</span><span class="L zt">鋁</span><span class="L zs">铝</span><span class="L it">Alluminio</span><span class="L ja">アルミ</span></button><button type="button" class="mbtn" data-m="steel"><span class="L en">Steel</span><span class="L zt">鋼</span><span class="L zs">钢</span><span class="L it">Acciaio</span><span class="L ja">鋼</span></button></div></div><div class="crow"><label><span><span class="L en">Panel thickness H₁</span><span class="L zt">板厚 H₁</span><span class="L zs">板厚 H₁</span><span class="L it">Spessore H₁</span><span class="L ja">板厚 H₁</span></span><b id="calc-h1v"></b></label><input id="calc-h1" type="range" min="0.7" max="1.6" step="0.05" value="1.2"></div><div class="crow"><label><span><span class="L en">Frequency</span><span class="L zt">頻率</span><span class="L zs">频率</span><span class="L it">Frequenza</span><span class="L ja">周波数</span></span><b id="calc-fv"></b></label><input id="calc-f" type="range" min="1.7" max="3" step="0.005" value="2.3"></div><div class="cout">η<sub>c</sub> = <span class="big" id="calc-eta"></span><div class="meterwrap"><div id="calc-meter"></div></div><div class="t60s"><span class="L en">Ring-down T₆₀ — treated <b id="calc-t60"></b> · bare panel <b id="calc-t60b"></b></span><span class="L zt">殘響 T₆₀ —— 處理後 <b id="calc-t60"></b> · 裸板 <b id="calc-t60b"></b></span><span class="L zs">残响 T₆₀ —— 处理后 <b id="calc-t60"></b> · 裸板 <b id="calc-t60b"></b></span><span class="L it">T₆₀ — trattato <b id="calc-t60"></b> · pannello nudo <b id="calc-t60b"></b></span><span class="L ja">残響 T₆₀ —— 処理後 <b id="calc-t60"></b> · 未処理 <b id="calc-t60b"></b></span></div></div></div><div class="card icard"><div class="step"><span class="L en">Listen</span><span class="L zt">用耳朵驗證</span><span class="L zs">用耳朵验证</span><span class="L it">Ascolta</span><span class="L ja">聴いて確かめる</span></div><h3><span class="L en">Hear the difference — door-close simulation</span><span class="L zt">聽出差別 —— 關門聲模擬</span><span class="L zs">听出差别 —— 关门声模拟</span><span class="L it">Ascolta la differenza — chiusura porta</span><span class="L ja">違いを聴く —— ドア閉鎖音シミュレーション</span></h3><p style="font-size:14px"><span class="L en">Two synthesized door-close signatures driven by the T₆₀ values on the left — the metallic ring is exactly what constrained-layer damping removes. Adjust the sliders, then listen again.</span><span class="L zt">兩段由左側 T₆₀ 數值即時合成的關門聲 —— 那串金屬「哐啷」殘響正是約束阻尼要消滅的東西。拖動滑桿後再聽一次，差別會跟著物理走。</span><span class="L zs">两段由左侧 T₆₀ 数值即时合成的关门声 —— 那串金属「哐啷」残响正是约束阻尼要消灭的东西。拖动滑杆后再听一次，差别会跟着物理走。</span><span class="L it">Due firme di chiusura porta sintetizzate dai valori T₆₀ a sinistra — il ring metallico è esattamente ciò che lo smorzamento elimina. Regola i cursori e riascolta.</span><span class="L ja">左の T₆₀ 値から合成した 2 つのドア閉鎖音 —— あの金属的な残響こそ、拘束層制振が消し去るものです。スライダーを動かして聴き比べてください。</span></p><div><button type="button" class="abtn" id="btn-bare">▶ <span class="L en">Untreated</span><span class="L zt">未處理</span><span class="L zs">未处理</span><span class="L it">Non trattata</span><span class="L ja">未処理</span></button><button type="button" class="abtn hot" id="btn-treated">▶ <span class="L en">Treated</span><span class="L zt">處理後</span><span class="L zs">处理后</span><span class="L it">Trattata</span><span class="L ja">処理後</span></button></div><p class="fine"><span class="L en">Synthesized illustration of decay times, not a recording.</span><span class="L zt">為衰減時間之合成示意，非實際錄音。</span><span class="L zs">为衰减时间之合成示意，非实际录音。</span><span class="L it">Illustrazione sintetizzata dei tempi di decadimento, non una registrazione.</span><span class="L ja">減衰時間の合成デモであり、実際の録音ではありません。</span></p></div></div>
   <div class="grid2">
    <div class="card"><h3><span class="L en">Designed at the knee of the curve</span><span class="L zt">設計在曲線的膝點上</span><span class="L zs">设计在曲线的膝点上</span><span class="L it">Progettato al ginocchio della curva</span><span class="L ja">曲線の膝点で設計</span></h3>
     <p style="font-size:14px"><span class="L en">Our parameter sweep shows constraining-foil benefit saturates: 0.10 mm reaches η<sub>c</sub> = 0.226 at 200 Hz — within 5% of foils 50% thicker, while conforming to curved panels. We spend the specification budget where the physics pays: <b>core authenticity and antinode placement, not foil vanity thickness.</b></span><span class="L zt">參數掃描顯示約束層增厚效益早已飽和：0.10 mm 已達厚 50% 箔材 95% 的效果，而貼合性遠勝。規格預算花在物理真正回報的地方 —— <b>膠料真偽與反節點佈位，而非「箔越厚越好」的行銷話術。</b></span><span class="L zs">参数扫描显示约束层增厚效益早已饱和：0.10 mm 已达厚 50% 箔材 95% 的效果，而贴合性远胜。规格预算花在物理真正回报的地方 —— <b>胶料真伪与反节点布位，而非「箔越厚越好」的营销话术。</b></span><span class="L it">La nostra scansione parametrica mostra che il beneficio della lamina satura: 0,10 mm raggiunge η<sub>c</sub> = 0,226 a 200 Hz — entro il 5% di lamine più spesse del 50%, aderendo però ai pannelli curvi. Il budget di specifica va dove la fisica rende: <b>autenticità del nucleo e posizionamento sugli antinodi, non spessore di facciata.</b></span><span class="L ja">パラメータ掃引の結果、拘束箔の効果は飽和します：0.10 mm で 200 Hz の η<sub>c</sub> = 0.226 に到達 —— 50%厚い箔との差は 5%以内、しかも曲面への追従性は圧倒的。仕様予算は物理が報いる所に使います：<b>箔の見栄え厚ではなく、コアの真正性と腹（アンチノード）配置に。</b></span></p></div>
@@ -469,6 +496,76 @@ body[data-lang="zs"]{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pi
   if(!reduced) requestAnimationFrame(frame);
  }
  requestAnimationFrame(frame);
+})();
+</script>
+<script>
+(function(){
+ var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var pb=document.createElement('div'); pb.id='scrollbar'; document.body.appendChild(pb);
+ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);pb.style.width=(p*100)+'%';},{passive:true});
+ var els=document.querySelectorAll('section .card, section .pkg, section figure, section table, section .eq, section h2, section .intro, .redline');
+ els.forEach(function(e){e.classList.add('rv');});
+ if(rm){els.forEach(function(e){e.classList.add('in');});}
+ else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:0.1});
+  els.forEach(function(e,i){e.style.transitionDelay=((i%4)*70)+'ms';io.observe(e);});}
+ if(!rm){document.querySelectorAll('.hs .v').forEach(function(v){
+   var txt=v.textContent, m=txt.match(/\d+(\.\d+)?/); if(!m) return;
+   var target=parseFloat(m[0]), dec=(m[0].split('.')[1]||'').length, t0=null;
+   function step(t){ if(!t0)t0=t; var k=Math.min(1,(t-t0)/900); k=1-Math.pow(1-k,3);
+    v.textContent=txt.replace(m[0],(target*k).toFixed(dec)); if(k<1) requestAnimationFrame(step);}
+   requestAnimationFrame(step);});}
+ var h1s=document.getElementById('calc-h1'), fs=document.getElementById('calc-f');
+ if(h1s){
+  var matVal='al';
+  var E3=70e9,H3=0.10e-3,H2=2.0e-3,G2=1.0e6,ETA2=0.85,NU=0.33;
+  function etac(E1,rho,H1,f){
+   var d=H2+(H1+H3)/2, EA=(E1*H1*E3*H3)/(E1*H1+E3*H3), D13=(E1*Math.pow(H1,3)+E3*Math.pow(H3,3))/12;
+   var Y=d*d*EA/D13;
+   var w=2*Math.PI*f, m=rho*H1, D=E1*Math.pow(H1,3)/(12*(1-NU*NU));
+   var k=Math.pow(w*w*m/D,0.25);
+   var X=G2/(k*k*H2*E3*H3);
+   return ETA2*Y*X/(1+(2+Y)*X+(1+Y)*(1+ETA2*ETA2)*X*X);
+  }
+  window.__T60={bare:1.1,treated:0.06};
+  function upd(){
+   var st=matVal==='steel', E1=st?200e9:70e9, rho=st?7850:2700;
+   var H1=parseFloat(h1s.value)/1000, f=Math.round(Math.pow(10,parseFloat(fs.value)));
+   var e=etac(E1,rho,H1,f), t60=2.2/(e*f), t60b=2.2/(0.005*f);
+   document.getElementById('calc-h1v').textContent=(H1*1000).toFixed(2).replace(/0$/,'')+' mm';
+   document.getElementById('calc-fv').textContent=f+' Hz';
+   document.getElementById('calc-eta').textContent=e.toFixed(3);
+   document.getElementById('calc-t60').textContent=(t60*1000).toFixed(0)+' ms';
+   document.getElementById('calc-t60b').textContent=(t60b*1000).toFixed(0)+' ms';
+   document.getElementById('calc-meter').style.width=Math.min(100,e/0.40*100)+'%';
+   window.__T60={bare:Math.min(1.6,t60b),treated:Math.max(0.04,Math.min(0.4,t60))};
+  }
+  document.querySelectorAll('.mbtn').forEach(function(b){b.addEventListener('click',function(){
+   matVal=b.getAttribute('data-m');
+   document.querySelectorAll('.mbtn').forEach(function(x){x.classList.toggle('on',x===b);}); upd();});});
+  [h1s,fs].forEach(function(x){x.addEventListener('input',upd);}); upd();
+ }
+ var AC=null;
+ function slam(damped){
+  try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();}catch(e){return;}
+  if(AC.state==='suspended')AC.resume();
+  var t=AC.currentTime+0.03;
+  var T=(window.__T60?(damped?window.__T60.treated:window.__T60.bare):(damped?0.06:1.1));
+  var o0=AC.createOscillator(),g0=AC.createGain();
+  o0.type='sine'; o0.frequency.setValueAtTime(damped?72:95,t); o0.frequency.exponentialRampToValueAtTime(damped?46:60,t+0.12);
+  g0.gain.setValueAtTime(0.85,t); g0.gain.exponentialRampToValueAtTime(0.001,t+(damped?0.15:0.24));
+  o0.connect(g0); g0.connect(AC.destination); o0.start(t); o0.stop(t+0.4);
+  var modes=[182,417,733,1204,1890];
+  modes.forEach(function(fm,i){
+   var o=AC.createOscillator(),g=AC.createGain();
+   o.type='sine'; o.frequency.value=fm*(1+Math.sin(i*7)*0.004);
+   var a=(damped?0.09:0.22)/(1+i*0.7);
+   g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(a,t+0.008);
+   g.gain.exponentialRampToValueAtTime(0.0006,t+0.03+T*(1-i*0.07));
+   o.connect(g); g.connect(AC.destination); o.start(t); o.stop(t+0.08+T);
+  });
+ }
+ var bU=document.getElementById('btn-bare'), bT=document.getElementById('btn-treated');
+ if(bU){bU.addEventListener('click',function(){slam(false);}); bT.addEventListener('click',function(){slam(true);});}
 })();
 </script>
 </body>
