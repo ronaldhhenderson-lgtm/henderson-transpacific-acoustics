@@ -38,7 +38,23 @@ nav{position:sticky;top:0;z-index:50;background:var(--navbg);backdrop-filter:blu
 .nav-links{margin-left:auto;display:flex;gap:22px;font-size:13px}
 .nav-links a{color:var(--dgC)}
 .nav-links a:hover{color:var(--gold-2);text-decoration:none}
-@media(max-width:760px){.nav-links{display:none}}
+#navburger{display:none;background:transparent;border:1px solid var(--ac45);color:var(--gold-2);
+ font-size:19px;line-height:1;padding:6px 12px;border-radius:6px;cursor:pointer;margin-left:auto}
+@media(max-width:760px){
+ .nav-in{flex-wrap:wrap;height:auto;padding:10px 16px;gap:8px 12px}
+ .logo{font-size:12px}
+ #navburger{display:block;order:2}
+ .langbar#themebar{order:3;margin-left:0!important}
+ .langbar#langbar{order:4;margin-left:0!important}
+ .nav-links{display:none;order:9;width:100%;flex-direction:column;gap:2px;
+  border-top:1px solid var(--ac30);padding:10px 2px 6px;margin:4px 0 0}
+ .nav-links a{padding:11px 8px;font-size:15px;border-radius:6px}
+ nav.open .nav-links{display:flex}
+ section{padding:52px 18px}
+ .hero{padding:56px 18px 48px}
+ .sec-in table{display:block;overflow-x:auto}
+ .cta.ghost{margin-left:0;margin-top:10px}
+}
 /* ---- hero ---- */
 .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 55%,var(--navy-3) 100%);color:var(--ivory);
  padding:88px 28px 72px;position:relative;overflow:hidden}
@@ -210,6 +226,7 @@ body[data-lang="zs"]{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pi
 <nav>
  <div class="nav-in">
   <div class="logo">HENDERSON <b>TRANSPACIFIC</b> LLC<small>Materials Science Department</small></div>
+  <button id="navburger" aria-label="Menu" aria-expanded="false">☰</button>
   <div class="nav-links">
    <a href="#science"><span class="L en">The Science</span><span class="L zt">科學原理</span><span class="L zs">科学原理</span><span class="L it">La Scienza</span><span class="L ja">科学</span></a><a href="#chemistry"><span class="L en">Chemistry</span><span class="L zt">界面化學</span><span class="L zs">界面化学</span><span class="L it">Chimica</span><span class="L ja">化学</span></a><a href="#service"><span class="L en">Service</span><span class="L zt">服務</span><span class="L zs">服务</span><span class="L it">Servizio</span><span class="L ja">サービス</span></a>
    <a href="#acceptance"><span class="L en">Acceptance</span><span class="L zt">驗收</span><span class="L zs">验收</span><span class="L it">Collaudo</span><span class="L ja">検収</span></a><a href="#safety"><span class="L en">Safety</span><span class="L zt">安全</span><span class="L zs">安全</span><span class="L it">Sicurezza</span><span class="L ja">安全</span></a><a href="#contact"><span class="L en">Enquire</span><span class="L zt">詢價</span><span class="L zs">询价</span><span class="L it">Contatti</span><span class="L ja">お問い合わせ</span></a>
@@ -587,6 +604,9 @@ body[data-lang="zs"]{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pi
    o.connect(g); g.connect(AC.destination); o.start(t); o.stop(t+0.08+T);
   });
  }
+ var nb=document.getElementById('navburger'), nav=document.querySelector('nav');
+ if(nb){nb.addEventListener('click',function(){var o=nav.classList.toggle('open');nb.setAttribute('aria-expanded',o);nb.textContent=o?'✕':'☰';});
+  document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');nb.textContent='☰';});});}
  var tb=document.getElementById('themebar');
  if(tb){tb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
   document.documentElement.setAttribute('data-theme',b.dataset.t);
